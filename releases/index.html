@@ -1,0 +1,2056 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oneAPI Specification Releases &#8212; oneAPI Specification Versions  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/oneapi-src/oneapi-spec/edit/main/releases/index.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/oneapi-src/oneapi-spec/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>oneAPI Specification Releases</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oneapi-specification">oneAPI Specification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#release-notes">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rev-1">1.3 rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#provisional-rev-1">1.3 provisional rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1.2 rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1.2 provisional rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1.1 rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#provisional-rev-2">1.1 provisional rev 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">1.1 provisional rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rev-2">1.0 rev 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1.0 rev 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oneipl">oneIPL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#oneipl-v0-6">oneIPL v0.6</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#oneipl-v0-5">oneIPL v0.5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onedtl">oneDTL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onedtl-v0-5">oneDTL v0.5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ray-tracing">Ray Tracing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ray-tracing-v0-5">Ray Tracing v0.5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph">oneDNN Graph</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v1-0-beta">oneDNN Graph v1.0-beta</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v1-0-alpha">oneDNN Graph v1.0-alpha</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v0-9">oneDNN Graph v0.9</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v0-8">oneDNN Graph v0.8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v0-5">oneDNN Graph v0.5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl">oneVPL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-9-0">oneVPL v2.9.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-8-0">oneVPL v2.8.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-7-1">oneVPL v2.7.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-7-0">oneVPL v2.7.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-6-0">oneVPL v2.6.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-5-0">oneVPL v2.5.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-4-0">oneVPL v2.4.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-3-1">oneVPL v2.3.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero">Level Zero</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-9-3">Level Zero v1.9.3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-9-2">Level Zero v1.9.2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-9-1">Level Zero v1.9.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-9-0">Level Zero v1.9.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-8-0">Level Zero v1.8.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-7-8">Level Zero v1.7.8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-7-0">Level Zero v1.7.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-6-10">Level Zero v1.6.10</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-6-3">Level Zero v1.6.3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-6-0">Level Zero v1.6.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-5-17">Level Zero v1.5.17</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-5-16">Level Zero v1.5.16</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-5-8">Level Zero v1.5.8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-5-0">Level Zero v1.5.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-4-8">Level Zero v1.4.8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-4">Level Zero v1.4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-3">Level Zero v1.3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-2">Level Zero v1.2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-1">Level Zero v1.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-0">Level Zero v1.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v0-95">Level Zero v0.95</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v0-91">Level Zero v0.91</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="section" id="oneapi-specification-releases">
+<h1>oneAPI Specification Releases<a class="headerlink" href="#oneapi-specification-releases" title="Permalink to this heading">#</a></h1>
+<p>This document lists releases of oneAPI specifications.</p>
+<p>In addition to be published as part of the oneAPI spefication, some of
+the components publish specifications independent from the oneAPI
+specification. Typically, a oneAPI specification includes a snapshot
+of the latest approved release of the component. This page lists
+releases of the oneAPI specification and releases of component
+specifications.  Releases of collections of oneAPI components
+(e.g. Intel oneAPI Basekit) identify the version of the oneAPI
+specification that it supports.</p>
+<div class="section" id="oneapi-specification">
+<h2>oneAPI Specification<a class="headerlink" href="#oneapi-specification" title="Permalink to this heading">#</a></h2>
+<p>Releases are listed below. See <a class="reference external" href="https://github.com/oneapi-src/oneapi-spec">GitHub</a> for the latest build.</p>
+<div class="section" id="id1">
+<h3>1.3<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#rev-1">1.3 rev 1</a></p></td>
+<td><p>2023-11-06</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/versions/1.3-rev-1/">HTML</a> <a class="reference external" href="https://spec.oneapi.io/versions/1.3-rev-1/oneAPI-spec.pdf">PDF</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#provisional-rev-1">1.3 provisional rev 1</a></p></td>
+<td><p>2023-9-14</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/versions/1.3-provisional-rev-1/">HTML</a> <a class="reference external" href="https://spec.oneapi.io/versions/1.3-provisional-rev-1/oneAPI-spec.pdf">PDF</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h3>1.2<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#id5">1.2 rev 1</a></p></td>
+<td><p>2022-11-10</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/versions/1.2-rev-1/">HTML</a> <a class="reference external" href="https://spec.oneapi.io/versions/1.2-rev-1/oneAPI-spec.pdf">PDF</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id6">1.2 provisional rev 1</a></p></td>
+<td><p>2022-9-8</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/versions/1.2-provisional-rev-1/">HTML</a> <a class="reference external" href="https://spec.oneapi.io/versions/1.2-provisional-rev-1/oneAPI-spec.pdf">PDF</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h3>1.1<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#id7">1.1 rev 1</a></p></td>
+<td><p>2021-11-12</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/versions/1.1-rev-1/">HTML</a> <a class="reference external" href="https://spec.oneapi.io/versions/1.1-rev-1/oneAPI-spec.pdf">PDF</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#provisional-rev-2">1.1 provisional rev 2</a></p></td>
+<td><p>2021-7-19</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/versions/1.1-provisional-rev-2/">HTML</a> <a class="reference external" href="https://spec.oneapi.io/versions/1.1-provisional-rev-2/oneAPI-spec.pdf">PDF</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id8">1.1 provisional rev 1</a></p></td>
+<td><p>2021-4-7</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/versions/1.1-provisional-rev-1/">HTML</a> <a class="reference external" href="https://spec.oneapi.io/versions/1.1-provisional-rev-1/oneAPI-spec.pdf">PDF</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h3>1.0<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#rev-2">1.0 rev 2</a></p></td>
+<td><p>2020-10-21</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/versions/1.0-rev-2/">HTML</a> <a class="reference external" href="https://spec.oneapi.io/versions/1.0-rev-2/oneAPI-spec.pdf">PDF</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id9">1.0 rev 1</a></p></td>
+<td><p>2020-9-14</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/versions/1.0-rev-1/">HTML</a> <a class="reference external" href="https://spec.oneapi.io/versions/1.0-rev-1/oneAPI-spec.pdf">PDF</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="release-notes">
+<h3>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this heading">#</a></h3>
+<div class="section" id="rev-1">
+<h4>1.3 rev 1<a class="headerlink" href="#rev-1" title="Permalink to this heading">#</a></h4>
+<p>Changes since 1.2</p>
+<ul>
+<li><p>oneDPL</p>
+<ul class="simple">
+<li><p>Specified how random number generators and distributions support
+sycl::vec</p></li>
+<li><p>Incremental improvements and fixes</p></li>
+</ul>
+</li>
+<li><p>oneCCL</p>
+<ul class="simple">
+<li><p>For oneCCL, we added new APIs for point to point send/recv
+operations.</p></li>
+</ul>
+</li>
+<li><p>Level Zero</p>
+<p>See <a class="reference internal" href="#level-zero">Level Zero</a></p>
+</li>
+<li><p>oneTBB</p>
+<ul class="simple">
+<li><p>Allowed using pointers to class functions and members in place of
+function objects</p></li>
+<li><p>Incremental improvements and fixes, including fixes in the oneTBB
+named requirements</p></li>
+</ul>
+</li>
+<li><p>oneMKL</p>
+<ul class="simple">
+<li><p>Introduced RNG Device API</p></li>
+<li><p>Added complex version of BLAS SYR/SYR2/SYMV</p></li>
+<li><p>Added optional index_base parameter for BLAS IAMAX/IAMIN</p></li>
+<li><p>Allow either values or pointers for scalar parameters to BLAS
+functions with USM interfaces</p></li>
+<li><p>Added DFT move/copy constructor/assignment to descriptor class</p></li>
+<li><p>Added forward/backward strides to DFT API</p></li>
+<li><p>Added SYCL queue to Sparse BLAS matrix handle initialization API</p></li>
+<li><p>Added NNZ argument to Sparse BLAS set_csr_data API</p></li>
+<li><p>Fixed bugs</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="provisional-rev-1">
+<h4>1.3 provisional rev 1<a class="headerlink" href="#provisional-rev-1" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="id5">
+<h4>1.2 rev 1<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<p>Changes since 1.1</p>
+<ul>
+<li><p>SYCL</p>
+<p>The following extensions were added:</p>
+<ul class="simple">
+<li><p><cite>sycl_ext_oneapi_assert</cite> - Support for device-side assert.</p></li>
+<li><p><cite>sycl_ext_oneapi_default_context</cite> - Adds the concept of a platform
+default context.</p></li>
+<li><p><cite>sycl_ext_oneapi_discard_queue_events</cite> - Adds a queue property
+that can optimize queues in some circumstances.</p></li>
+<li><p><cite>sycl_ext_oneapi_srgb</cite> - Exposes sRGB support for images.</p></li>
+<li><p><cite>sycl_ext_oneapi_usm_device_read_only</cite> - Adds a property for USM
+allocations.</p></li>
+</ul>
+</li>
+<li><p>oneDPL</p>
+<p>The following updates were added in oneDPL specification for version 1.2:</p>
+<ul class="simple">
+<li><p>The content was reorganized.</p></li>
+<li><p>API for random number generation was added.</p></li>
+<li><p>Incremental improvements and bug fixes.</p></li>
+</ul>
+</li>
+<li><p>oneDNN</p>
+<p>This is a new major release of oneDNN spec, which breaks
+compatibility with previously published versions.</p>
+<ul class="simple">
+<li><p>oneDNN Graph extension: a graph extension is added to allow
+seamless fusion of operations, and more flexibility for backend
+specific optimizations.</p></li>
+<li><p>reworked quantization workflow: in order to support dynamic
+quantization efficiently and allow better reuse of primitive
+objects, quantization parameters are no longer passed at primitive
+creation, but at primitive execution.  This also allows to pass
+quantization parameters from device memory, instead of passing
+them from host memory.</p></li>
+<li><p>opaque memory descriptors, and removal of operation descriptors:
+this allows more flexibility for oneDNN implementation to add new
+memory layouts and primitive extensions without breaking
+compatibility.</p></li>
+<li><p>Better support for type conversion fusion: all primitives now take
+separate descriptors for input and output, which allows to fuse
+type conversions to all primitives.</p></li>
+</ul>
+</li>
+<li><p>Level Zero</p>
+<p>See <a class="reference internal" href="#level-zero">Level Zero</a></p>
+</li>
+<li><p>oneTBB</p>
+<p>The following updates were added in oneTBB specification for version
+1.2:</p>
+<ul class="simple">
+<li><p>Support for core types and thread-per-core limit was added to
+task_arena constraints.</p></li>
+<li><p>API of concurrent_queue and concurrent_bounded_queue was extended
+to better match C++ standard containers.</p></li>
+<li><p>Incremental improvements and bug fixes.</p></li>
+</ul>
+</li>
+<li><p>oneVPL</p>
+<p>This release updates oneVPL specification to version 2.9.0. New
+features include:</p>
+<ul class="simple">
+<li><p>Deprecated mfxExtCodingOption2::BitrateLimit.</p></li>
+<li><p>Added note that applications must call MFXVideoENCODE_Query() to
+check for support of mfxExtChromaLocInfo and mfxExtHEVCRegion
+extension buffers.</p></li>
+<li><p>Added AV1 HDR metadata description and further clarified
+mfxExtMasteringDisplayColourVolume and
+mfxExtContentLightLevelInfo.</p></li>
+<li><p>Added deprecation messages to the functions MFXQueryAdapters,
+MFXQueryAdaptersDecode, and MFXQueryAdaptersNumber.
+Applications should use the process described in oneVPL Dispatcher
+to enumerate and select adapters.</p></li>
+<li><p>Fixed multiple spelling errors.</p></li>
+<li><p>Added extension buffer mfxExtSyncSubmission to return submission
+synchronization sync point.</p></li>
+<li><p>Added extension buffer mfxExtVPPPercEncPrefilte to control
+perceptual encoding prefilter.</p></li>
+<li><p>Deprecated mfxPlatform::CodeName and corresponding enum values.</p></li>
+<li><p>Added mfxExtendedDeviceId::RevisionID and extDeviceUUID to be
+aligned across multiple domains including compute and specify device
+UUID accordingly.</p></li>
+<li><p>Added extension buffer mfxExtTuneEncodeQuality and correspondent
+enumeration to specify encoding tuning option.</p></li>
+<li><p>Updated description of MFXEnumImplementations to clarify that the
+input mfxImplCapsDeliveryFormat determines the type of structure returned.</p></li>
+<li><p>Updated mfxvideo++.h to use MFXLoad API.</p></li>
+</ul>
+</li>
+<li><p>oneMKL</p>
+<p>The following updates were added in oneMKL specification for version
+1.2:</p>
+<ul class="simple">
+<li><p>Dense matrix copy and transpose routines were added in the
+BLAS-like extensions</p></li>
+<li><p>half/bfloat16 precision support were added to several L1 BLAS
+routines</p></li>
+<li><p>The supported precisions for BLAS gemm and gemm_batch were updated</p></li>
+<li><p>Several routines in BLAS had const attributes properly assigned to
+arguments</p></li>
+<li><p>Add a missing constraint on parameter “n” for LAPACK orgqr
+routines</p></li>
+<li><p>Improve directories tree of VM, RNG, Stats domains of oneMKL. Fix
+minor issues in RNG</p></li>
+<li><p>Other changes include minor clarifications and bug fixes.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h4>1.2 provisional rev 1<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="id7">
+<h4>1.1 rev 1<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<p>Changes since 1.0</p>
+<ul>
+<li><p>Ray Tracing: Added</p>
+<ul class="simple">
+<li><p>Ray tracing capabilities have been added to the oneAPI
+specification providing software developers across the industry
+the ability to “write once” for high-fidelity ray-traced
+computations across multiple vendors’ systems and
+accelerators. Standardizing these interfaces provides
+well-designed, tried and true APIs and options for a broad set of
+compute and rendering infrastructure development.</p></li>
+<li><p>The ray tracing functionality is subdivided into several
+domains within the oneAPI Specification:</p>
+<ul>
+<li><p>Geometric ray tracing computations</p></li>
+<li><p>Volumetric computation and rendering</p></li>
+<li><p>Image denoising</p></li>
+<li><p>Scalable rendering and visualization infrastructure</p></li>
+</ul>
+</li>
+<li><p>The set of Ray Tracing APIs include the following, which
+are in active use via the Intel® oneAPI Rendering Toolkit:</p>
+<ul>
+<li><p>Embree</p></li>
+<li><p>Open Volume Kernel Library</p></li>
+<li><p>Open Image Denoise</p></li>
+<li><p>OSPRay</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>oneMKL:</p>
+<p>Introduces additional batched APIs for dense linear algebra. Sparse
+matrix-dense matrix product has been extended to support both row
+and column major layout for the dense matrix. The input USM pointers
+in the vector math APIs are now const qualified. To align with
+changes in SYCL 2020, all oneMKL USM APIs were updated to take an
+(optional) std::vector of input events instead of
+sycl::vector_class. Other changes include minor clarifications and
+bug fixes.</p>
+</li>
+<li><p>oneTBB:</p>
+<p>Introduces a way for collaborative one-time function processing
+(collaborative_call_once), mutex classes with adaptive waiting
+behavior (mutex, rw_mutex), the ability to wait for thread completion
+(task_scheduler_handle and the finalize function). Extended task_group
+and task_arena classes to support deferred task submission via
+the new task_handle class. Extended concurrent_hash_map with methods
+that support lookup for distinct key types.</p>
+</li>
+<li><p>DPC++</p>
+<p>The new extensions listed as part of oneAPI 1.1 include simplified
+device selection through text-based filtering, a default context for
+each platform to simplify common coding patterns, interoperability
+with devices that use Level Zero as a backend, an easier to use
+kernel-scope local memory allocation mechanism, GPU-specific
+information queries, FPGA-specific performance tuning controls, and
+a sub-group mask feature.</p>
+<p>DPC++ features that were incorporated into the SYCL 2020 spec were
+removed from this document.</p>
+</li>
+<li><p>oneVPL</p>
+<p>New AV1 encode features. Enabled support for planar I422, I210, and
+BGR formats. Added surface pool interface for surface management.</p>
+</li>
+<li><p>Level Zero</p>
+<p>Updates included significantly improved image processing
+functionality, better interoperability with other APIs and operating
+systems, new extensions for floating-point atomics and additional
+subgroup operations, and extensions to tune and optimize the way
+memory is allocated and kernels are scheduled on specific devices.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="provisional-rev-2">
+<h4>1.1 provisional rev 2<a class="headerlink" href="#provisional-rev-2" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>oneVPL: Updated to 2.4.0</p></li>
+<li><p>oneDAL: Updated some APIs</p></li>
+<li><p>oneMKL: bug fixes</p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h4>1.1 provisional rev 1<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Ray Tracing: added to oneAPI specification</p></li>
+<li><p>VPL: Updated to 2.3.1</p></li>
+<li><p>Level Zero: Updated to 1.1.2</p></li>
+<li><p>oneDNN: Added graph API</p></li>
+</ul>
+</div>
+<div class="section" id="rev-2">
+<h4>1.0 rev 2<a class="headerlink" href="#rev-2" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Formatting fixes for PDF</p></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h4>1.0 rev 1<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Initial release</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="oneipl">
+<h2>oneIPL<a class="headerlink" href="#oneipl" title="Permalink to this heading">#</a></h2>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#oneipl-v0-6">oneIPL v0.6</a></p></td>
+<td><p>2022-02-18</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/oneipl/0.6/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oneipl-v0-5">oneIPL v0.5</a></p></td>
+<td><p>2021-10-8</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/oneipl/0.5/index.html">HTML</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id10">
+<h3>Release Notes<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<div class="section" id="oneipl-v0-6">
+<h4>oneIPL v0.6<a class="headerlink" href="#oneipl-v0-6" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Color coding changed to memory layout in image API</p></li>
+<li><p>Image parameters access moved to image API</p></li>
+<li><p>Minor API change for gaussian and normalize</p></li>
+</ul>
+</div>
+<div class="section" id="oneipl-v0-5">
+<h4>oneIPL v0.5<a class="headerlink" href="#oneipl-v0-5" title="Permalink to this heading">#</a></h4>
+<p>Initial release</p>
+</div>
+</div>
+</div>
+<div class="section" id="onedtl">
+<h2>oneDTL<a class="headerlink" href="#onedtl" title="Permalink to this heading">#</a></h2>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#onedtl-v0-5">oneDTL v0.5</a></p></td>
+<td><p>2021-11-10</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onedtl/latest/index.html">HTML</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id11">
+<h3>Release Notes<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<div class="section" id="onedtl-v0-5">
+<h4>oneDTL v0.5<a class="headerlink" href="#onedtl-v0-5" title="Permalink to this heading">#</a></h4>
+<p>Initial release</p>
+</div>
+</div>
+</div>
+<div class="section" id="ray-tracing">
+<h2>Ray Tracing<a class="headerlink" href="#ray-tracing" title="Permalink to this heading">#</a></h2>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#ray-tracing-v0-5">Ray Tracing v0.5</a></p></td>
+<td><p>2021-2-18</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/oneart/0.5-rev-1/index.html">HTML</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id12">
+<h3>Release Notes<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<div class="section" id="ray-tracing-v0-5">
+<h4>Ray Tracing v0.5<a class="headerlink" href="#ray-tracing-v0-5" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Ray tracing capabilities have been added to the oneAPI
+specification providing software developers across the industry the
+ability to “write once” for high-fidelity ray-traced computations
+across multiple vendors’ systems and accelerators. Standardizing
+these interfaces provides well-designed, tried and true APIs and
+options for a broad set of compute and rendering infrastructure
+development.</p></li>
+<li><p>The ray tracing functionality is subdivided into several
+domains within the oneAPI Specification:</p>
+<ul>
+<li><p>Geometric ray tracing computations</p></li>
+<li><p>Volumetric computation and rendering</p></li>
+<li><p>Image denoising</p></li>
+<li><p>Scalable rendering and visualization infrastructure</p></li>
+</ul>
+</li>
+<li><p>The set of Ray Tracing APIs include the following, which
+are in active use via the Intel® oneAPI Rendering Toolkit:</p>
+<ul>
+<li><p>Embree</p></li>
+<li><p>Open Volume Kernel Library</p></li>
+<li><p>Open Image Denoise</p></li>
+<li><p>OSPRay</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="onednn-graph">
+<h2>oneDNN Graph<a class="headerlink" href="#onednn-graph" title="Permalink to this heading">#</a></h2>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#onednn-graph-v1-0-beta">oneDNN Graph v1.0-beta</a></p></td>
+<td><p>2022-10-14</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onednn-graph/v1.0-beta/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#onednn-graph-v1-0-alpha">oneDNN Graph v1.0-alpha</a></p></td>
+<td><p>2021-04-01</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onednn-graph/v1.0-alpha/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#onednn-graph-v0-9">oneDNN Graph v0.9</a></p></td>
+<td><p>2021-12-28</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onednn-graph/latest/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#onednn-graph-v0-8">oneDNN Graph v0.8</a></p></td>
+<td><p>2021-11-8</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onednn-graph/latest/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#onednn-graph-v0-5">oneDNN Graph v0.5</a></p></td>
+<td><p>2021-4-8</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onednn-graph/latest/index.html">HTML</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id13">
+<h3>Release Notes<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<div class="section" id="onednn-graph-v1-0-beta">
+<h4>oneDNN Graph v1.0-beta<a class="headerlink" href="#onednn-graph-v1-0-beta" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Introduced support for floating point math mode at graph
+construction phase.</p></li>
+<li><p>Added finalize API to indicate that the user has finished adding
+operations into the graph and the graph is ready for partitioning.</p></li>
+<li><p>Added operations AbsBackprop, Mish, MishBackprop, and LeakyReLU.</p></li>
+<li><p>Removed operations HardTanh, Index, Pow, etc.</p></li>
+</ul>
+</div>
+<div class="section" id="onednn-graph-v1-0-alpha">
+<h4>oneDNN Graph v1.0-alpha<a class="headerlink" href="#onednn-graph-v1-0-alpha" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Introduced FP32 and BF16 training support on CPU</p></li>
+</ul>
+</div>
+<div class="section" id="onednn-graph-v0-9">
+<h4>oneDNN Graph v0.9<a class="headerlink" href="#onednn-graph-v0-9" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Introduced bf16 inference support.</p></li>
+<li><p>Introduced multi-head attention (MHA) fusion supported by oneDNN
+Graph compiler with optimized code generation (experimental).</p></li>
+</ul>
+</div>
+<div class="section" id="onednn-graph-v0-8">
+<h4>oneDNN Graph v0.8<a class="headerlink" href="#onednn-graph-v0-8" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Introduces int8 inference support.</p></li>
+</ul>
+</div>
+<div class="section" id="onednn-graph-v0-5">
+<h4>oneDNN Graph v0.5<a class="headerlink" href="#onednn-graph-v0-5" title="Permalink to this heading">#</a></h4>
+<p>Provides more optimization and improves the programming
+experience. The main changes are as follows:</p>
+<ul class="simple">
+<li><p>Support in-place optimization to reduce memory footprint and provide
+better data locality</p></li>
+<li><p>Support using the partition vector directly for compilation and
+execution without maintaining a computation graph</p></li>
+<li><p>Provide a special End op to express the multiple uses of a logical
+tensor, typically for indicating the output tensors of the graph</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="onevpl">
+<h2>oneVPL<a class="headerlink" href="#onevpl" title="Permalink to this heading">#</a></h2>
+<p>VPL is no longer part of oneAPI specification. See <a class="reference external" href="https://intel.github.io/libvpl/latest/index.html">VPL
+documentation</a> for new releases.</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#onevpl-v2-9-0">oneVPL v2.9.0</a></p></td>
+<td><p>2023-3-31</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onevpl/2.9.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#onevpl-v2-8-0">oneVPL v2.8.0</a></p></td>
+<td><p>2022-11-1</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onevpl/2.8.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#onevpl-v2-7-1">oneVPL v2.7.1</a></p></td>
+<td><p>2022-04-01</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onevpl/2.7.1/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#onevpl-v2-7-0">oneVPL v2.7.0</a></p></td>
+<td><p>2022-3-10</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onevpl/2.7.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#onevpl-v2-6-0">oneVPL v2.6.0</a></p></td>
+<td><p>2021-12-3</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onevpl/2.6.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#onevpl-v2-5-0">oneVPL v2.5.0</a></p></td>
+<td><p>2021-8-30</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onevpl/2.5.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#onevpl-v2-4-0">oneVPL v2.4.0</a></p></td>
+<td><p>2021-5-12</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onevpl/2.4.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#onevpl-v2-3-1">oneVPL v2.3.1</a></p></td>
+<td><p>2021-4-8</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/onevpl/2.3.1/index.html">HTML</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id14">
+<h3>Release Notes<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<div class="section" id="onevpl-v2-9-0">
+<h4>oneVPL v2.9.0<a class="headerlink" href="#onevpl-v2-9-0" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Deprecated mfxExtCodingOption2::BitrateLimit.</p></li>
+<li><p>Added note that applications must call MFXVideoENCODE_Query() to
+check for support of mfxExtChromaLocInfo and mfxExtHEVCRegion
+extension buffers.</p></li>
+<li><p>Added AV1 HDR metadata description and further clarified
+mfxExtMasteringDisplayColourVolume and
+mfxExtContentLightLevelInfo.</p></li>
+<li><p>Added deprecation messages to the functions MFXQueryAdapters,
+MFXQueryAdaptersDecode, and MFXQueryAdaptersNumber.
+Applications should use the process described in oneVPL Dispatcher
+to enumerate and select adapters.</p></li>
+<li><p>Fixed multiple spelling errors.</p></li>
+<li><p>Added extension buffer mfxExtSyncSubmission to return submission
+synchronization sync point.</p></li>
+<li><p>Added extension buffer mfxExtVPPPercEncPrefilte to control
+perceptual encoding prefilter.</p></li>
+<li><p>Deprecated mfxPlatform::CodeName and corresponding enum values.</p></li>
+<li><p>Added mfxExtendedDeviceId::RevisionID and extDeviceUUID to be
+aligned across multiple domains including compute and specify device
+UUID accordingly.</p></li>
+<li><p>Added extension buffer mfxExtTuneEncodeQuality and correspondent
+enumeration to specify encoding tuning option.</p></li>
+<li><p>Updated description of MFXEnumImplementations to clarify that the
+input mfxImplCapsDeliveryFormat determines the type of structure returned.</p></li>
+<li><p>Updated mfxvideo++.h to use MFXLoad API.</p></li>
+</ul>
+</div>
+<div class="section" id="onevpl-v2-8-0">
+<h4>oneVPL v2.8.0<a class="headerlink" href="#onevpl-v2-8-0" title="Permalink to this heading">#</a></h4>
+<p>New in this release:</p>
+<ul class="simple">
+<li><p>Introduced MFX_FOURCC_ABGR16F FourCC for 16-bit float point (per
+channel) 4:4:4 ABGR format.</p></li>
+<li><p>Clarified the mfxExtMasteringDisplayColourVolume::DisplayPrimariesX,
+mfxExtMasteringDisplayColourVolume::DisplayPrimariesY for the video
+processing usage.</p></li>
+<li><p>Added MFX_CONTENT_NOISY_VIDEO in ContentInfo definition.</p></li>
+<li><p>Added Camera Processing API for Camera RAW data.</p></li>
+<li><p>Introduced hint to disable external video frames caching for GPU copy.</p></li>
+<li><p>Clarified usage of
+mfxExtMasteringDisplayColourVolume::InsertPayloadToggle and
+mfxExtContentLightLevelInfo::InsertPayloadToggle during decode
+operations.</p></li>
+<li><p>Fixed multiple spelling errors.</p></li>
+<li><p>Experimental API: introduced mfxExtMBQP::Pitch value for QP map
+defined in mfxExtMBQP.</p></li>
+<li><p>Clarified when MFXEnumImplementations() may be called for
+implementation capabilities query.</p></li>
+<li><p>Added table with filenames included in the dispatcher’s search
+process.</p></li>
+</ul>
+<p>Bug Fixes:</p>
+<ul class="simple">
+<li><p>Fixed Experimental API table to note that mfxExtRefListCtrl and
+MFX_EXTBUFF_UNIVERSAL_REFLIST_CTRL were moved to production in
+version 2.8.</p></li>
+</ul>
+</div>
+<div class="section" id="onevpl-v2-7-1">
+<h4>oneVPL v2.7.1<a class="headerlink" href="#onevpl-v2-7-1" title="Permalink to this heading">#</a></h4>
+<p>Bug Fixes:</p>
+<ul class="simple">
+<li><p>changed use of word “interface” in header to avoid conflict with
+MSVC reserved words.</p></li>
+</ul>
+</div>
+<div class="section" id="onevpl-v2-7-0">
+<h4>oneVPL v2.7.0<a class="headerlink" href="#onevpl-v2-7-0" title="Permalink to this heading">#</a></h4>
+<p>New in this release:</p>
+<ul>
+<li><p>mfxExtVppAuxData::RepeatedFrame flag has been un-deprecated.</p></li>
+<li><p>Clarified GPUCopy control behavior.</p></li>
+<li><p>Introduced MFX_FOURCC_XYUV FourCC for non-alpha packed 4:4:4 format.</p></li>
+<li><p>Notice added to the mfxFrameSurfaceInterface::OnComplete to clarify
+when library can call this callback.</p></li>
+<li><p>Annotated missed aliases mfxExtHEVCRefListCtrl, mfxExtHEVCRefLists,
+mfxExtHEVCTemporalLayers.</p></li>
+<li><p>Refined description of mfxExtMasteringDisplayColourVolume and
+mfxExtContentLightLevelInfo for HDR SEI decoder usage.</p></li>
+<li><p>Experimental API: introduced interface to get statistics after
+encode.</p></li>
+<li><p>New dispatcher config properties:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pass through extension buffer to mfxInitializationParam.</p></li>
+<li><p>Select host or device responsible for the memory copy between
+host and device.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Bug Fixes:</p>
+<ul class="simple">
+<li><p>Fixed misprint in mfxExtDeviceAffinityMask description.</p></li>
+<li><p>MFXVideoENCODE_Query description fixed for query mode 1.</p></li>
+</ul>
+</div>
+<div class="section" id="onevpl-v2-6-0">
+<h4>oneVPL v2.6.0<a class="headerlink" href="#onevpl-v2-6-0" title="Permalink to this heading">#</a></h4>
+<p>New in this release:</p>
+<ul>
+<li><p>New development practice to treat some new API features as
+experimental was introduced.
+All new experimental API is wrapped with ONE_EXPERIMENTAL macro.</p></li>
+<li><p>Experimental API: introduced MFX_HANDLE_PXP_CONTEXT to support
+protected content.</p></li>
+<li><p>Experimental API: introduced CPUEncToolsProcessing hint to run
+adaptive encoding tools on CPU.</p></li>
+<li><p>Experimental API: extended device ID reporting to cover
+multi-adapter cases.</p></li>
+<li><p>Experimental API: introduced common alias for mfxExtAVCRefListCtrl</p></li>
+<li><p>Experimental API: mfxExtDecodeErrorReport ErrorTypes enum extended
+with new JPEG/MJPEG decode error report.</p></li>
+<li><p>Clarified LowPower flag meaning.</p></li>
+<li><p>Described that mfxExtThreadsParam can be attached to
+mfxInitializationParam during session initialization.</p></li>
+<li><p>Refined description of the MFXVideoDECODE_VPP_DecodeFrameAsync
+function.</p></li>
+<li><p>New dispatcher’s config filter property: MediaAdapterType.</p></li>
+<li><p>Marked all deprecated fields as MFX_DEPRECATED.</p></li>
+<li><p>Introduced priority loading option for custom libraries.</p></li>
+<li><p>Clarified AV1 encoder behavior about writing of IVF headers.</p></li>
+<li><p>Removed outdated note about loading priority of Intel Media Software
+Development Kit</p></li>
+<li><p>Spelled out mfxVariant type usage for strings.</p></li>
+<li><p>New product names for platforms:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Code name DG2,</p></li>
+<li><p>Code name ATS-M.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="onevpl-v2-5-0">
+<h4>oneVPL v2.5.0<a class="headerlink" href="#onevpl-v2-5-0" title="Permalink to this heading">#</a></h4>
+<p>New in this release:</p>
+<ul class="simple">
+<li><p>Added mfxMediaAdapterType to capability reporting.</p></li>
+<li><p>Added surface pool interface.</p></li>
+<li><p>Helper macro definition to simplify filter properties set up process
+for dispatcher.</p></li>
+<li><p>Added mfxExtAV1BitstreamParam, mfxExtAV1ResolutionParam and
+mfxExtAV1TileParam for AV1e.</p></li>
+<li><p>Added MFX_RESOURCE_VA_SURFACE_PTR and MFX_RESOURCE_VA_BUFFER_PTR
+enumerators.</p></li>
+<li><p>Clarified HEVC Main 10 Still Picture Profile configuration.</p></li>
+<li><p>External Buffer ID of mfxExtVideoSignalInfo and
+mfxExtMasteringDisplayColourVolume for video processing.</p></li>
+<li><p>New MFX_WRN_ALLOC_TIMEOUT_EXPIRED return status. Indicates that all
+surfaces are currently in use and timeout set by
+mfxExtAllocationHints for allocation of new surfaces through
+functions GetSurfaceForXXX expired.</p></li>
+<li><p>Introduced universal temporal layering structure.</p></li>
+<li><p>Added MFX_RESOURCE_VA_SURFACE_PTR and MFX_RESOURCE_VA_BUFFER_PTR
+enumerators.</p></li>
+<li><p>Introduced segmentation interface for AV1e, including ext-buffers
+and enums.</p></li>
+<li><p>Introduced planar I422 and I210 FourCC codes.</p></li>
+</ul>
+<p>Bug Fixes:</p>
+<ul class="simple">
+<li><p>Dispatcher: Removed /etc/ld.so.cache from oneVPL search order.</p></li>
+<li><p>mfxSurfaceArray: CDECL attribute added to the member-functions.</p></li>
+</ul>
+<p>Deprecated:</p>
+<ul class="simple">
+<li><p>mfxExtVPPDenoise extension buffer.</p></li>
+</ul>
+</div>
+<div class="section" id="onevpl-v2-4-0">
+<h4>oneVPL v2.4.0<a class="headerlink" href="#onevpl-v2-4-0" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Added ability to retrieve path to the shared library with the
+implementation.</p></li>
+<li><p>Added 3DLUT (Three-Dimensional Look Up Table) filter in VPP.</p></li>
+<li><p>Added mfxGUID structure to specify Globally Unique Identifiers
+(GUIDs).</p></li>
+<li><p>Added QueryInterface function to mfxFrameSurfaceInterface.</p></li>
+<li><p>Added AdaptiveRef and alias for ExtBrcAdaptiveLTR.</p></li>
+<li><p>Added MFX_FOURCC_BGRP FourCC for Planar BGR format.</p></li>
+<li><p>Environmental variables to control dispatcher’s logger.</p></li>
+</ul>
+</div>
+<div class="section" id="onevpl-v2-3-1">
+<h4>oneVPL v2.3.1<a class="headerlink" href="#onevpl-v2-3-1" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Encoding in Hyper mode.</p></li>
+<li><p>New product names for platforms:</p>
+<ul>
+<li><p>Code name Rocket Lake,</p></li>
+<li><p>Code name Alder Lake S,</p></li>
+<li><p>Code name Alder Lake P,</p></li>
+<li><p>Code name Arctic Sound P.</p></li>
+</ul>
+</li>
+<li><p>mfx.h header file is added which includes all header files.</p></li>
+<li><p>Added deprecation messages (deprecation macro) to the MFXInit and
+MFXInitEx functions definition.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="level-zero">
+<h2>Level Zero<a class="headerlink" href="#level-zero" title="Permalink to this heading">#</a></h2>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>View</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-9-3">Level Zero v1.9.3</a></p></td>
+<td><p>2024-05-03</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.9.3/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-9-2">Level Zero v1.9.2</a></p></td>
+<td><p>2024-02-20</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.9.2/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-9-1">Level Zero v1.9.1</a></p></td>
+<td><p>2024-02-09</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.9.1/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-9-0">Level Zero v1.9.0</a></p></td>
+<td><p>2024-02-02</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.9.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-8-0">Level Zero v1.8.0</a></p></td>
+<td><p>2023-10-13</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.8.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-7-8">Level Zero v1.7.8</a></p></td>
+<td><p>2023-8-28</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.7.8/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-7-0">Level Zero v1.7.0</a></p></td>
+<td><p>2023-7-9</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.7.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-6-10">Level Zero v1.6.10</a></p></td>
+<td><p>2023-5-19</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.6.10/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-6-3">Level Zero v1.6.3</a></p></td>
+<td><p>2023-4-25</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.6.3/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-6-0">Level Zero v1.6.0</a></p></td>
+<td><p>2023-3-31</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.6.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-5-17">Level Zero v1.5.17</a></p></td>
+<td><p>2023-3-2</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.5.17/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-5-16">Level Zero v1.5.16</a></p></td>
+<td><p>2023-2-28</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.5.16/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-5-8">Level Zero v1.5.8</a></p></td>
+<td><p>2023-1-19</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.5.8/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-5-0">Level Zero v1.5.0</a></p></td>
+<td><p>2023-1-11</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.5.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-4-8">Level Zero v1.4.8</a></p></td>
+<td><p>2022-07-22</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.4.8/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-4">Level Zero v1.4</a></p></td>
+<td><p>2022-05-05</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.4.0/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-3">Level Zero v1.3</a></p></td>
+<td><p>2021-11-27</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.3.7/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-2">Level Zero v1.2</a></p></td>
+<td><p>2021-05-11</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.2.43/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v1-1">Level Zero v1.1</a></p></td>
+<td><p>2021-02-04</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.1.2/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v1-0">Level Zero v1.0</a></p></td>
+<td><p>2020-10-02</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/1.0.4/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#level-zero-v0-95">Level Zero v0.95</a></p></td>
+<td><p>2020-05-28</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/0.95/index.html">HTML</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#level-zero-v0-91">Level Zero v0.91</a></p></td>
+<td><p>2020-03-04</p></td>
+<td><p><a class="reference external" href="https://spec.oneapi.io/level-zero/0.91/index.html">HTML</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id15">
+<h3>Release Notes<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<div class="section" id="level-zero-v1-9-3">
+<h4>Level Zero v1.9.3<a class="headerlink" href="#level-zero-v1-9-3" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p>Patches to v1.9.2 release</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Misc infrastructure updates</p></li>
+<li><p>Fix typo in for device property</p></li>
+<li><p>Update support for sampled bindless images</p></li>
+<li><p>Update new image formats</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-9-2">
+<h4>Level Zero v1.9.2<a class="headerlink" href="#level-zero-v1-9-2" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Patch v1.9 to fix API version enum</p></li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-9-1">
+<h4>Level Zero v1.9.1<a class="headerlink" href="#level-zero-v1-9-1" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p>Misc. patches to v1.9.0 release</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add missing enumerations to programming guides</p></li>
+<li><p>Add numWaitEvents parameter to mutable command list update wait events API (needed for loader)</p></li>
+<li><p>Add range to phCommandLists description in append command lists extension</p></li>
+<li><p>Fix spelling error in sysman subdevice properties structure type name</p></li>
+<li><p>Fix immediate command list append API parameter description to work around script limitation</p></li>
+<li><p>Convert fixed-length character array parameters to constant pointers in programmable metrics and firmware secuirty version extensions</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-9-0">
+<h4>Level Zero v1.9.0<a class="headerlink" href="#level-zero-v1-9-0" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core</p>
+<ul>
+<li><p>Fix device hierarchy environment variable value in docs</p></li>
+<li><p>Add experimental extension for immediate command list append command lists</p></li>
+<li><p>Add experimental extension to clone a command list</p></li>
+<li><p>Add experimental extension for mutable command lists</p></li>
+<li><p>Add experimental extension for bindless images</p></li>
+<li><p>Add introspection APIs</p></li>
+<li><p>Add invalid argument error code to zeContextMakeMemoryResident</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>Fixes to Memory Bandwidth Extensions</p></li>
+<li><p>Add SURVIVABILITY_MODE_DETECTED event type</p></li>
+<li><p>Clarify engine stats details</p></li>
+<li><p>Add clarification for setting frequency defaults</p></li>
+<li><p>New firmware API for logging</p></li>
+<li><p>Add extension to support Flat device model</p></li>
+<li><p>Add experimental extension to access firmware security version</p></li>
+<li><p>Add experimental extension for VF telemetry</p></li>
+</ul>
+</li>
+<li><p>Tools</p>
+<ul>
+<li><p>Add support for programmable metrics</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-8-0">
+<h4>Level Zero v1.8.0<a class="headerlink" href="#level-zero-v1-8-0" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core</p>
+<ul>
+<li><p>Add API Versions 1.7, 1.8</p></li>
+<li><p>Add experimental extension for counter-based events</p></li>
+<li><p>Clarify usage of IPC event pools</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>Add RasClearState to extension listing</p></li>
+<li><p>Add MEMORY power domain</p></li>
+<li><p>Add GPU power domain</p></li>
+<li><p>Clarify that the time units for engine activity counters are implementation specific</p></li>
+<li><p>Describe extension discovery</p></li>
+<li><p>Added GPU Board Temperature Metric</p></li>
+<li><p>Add power domain properties extension</p></li>
+<li><p>Deprecate unused APIs and/or APIs with enhanced replacements</p></li>
+<li><p>Deprecate compute unit debug mode</p></li>
+<li><p>Add memory timestamp valid bits experimental extension</p></li>
+<li><p>Add flash progress API</p></li>
+<li><p>Added Memory Page Offline Metrics</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-7-8">
+<h4>Level Zero v1.7.8<a class="headerlink" href="#level-zero-v1-7-8" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core</p>
+<ul>
+<li><p>Fix timestamps results parameter attributes</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>Add extension mechanism for dynamically discovering RAS error states</p></li>
+<li><p>Move engine activity extension to separate extension file</p></li>
+<li><p>Add clarifications to board and serial number descriptions</p></li>
+<li><p>Clarify description for multi-port throughput</p></li>
+</ul>
+</li>
+<li><p>Tools</p>
+<ul>
+<li><p>Clarify metric streamer desc member descriptions</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-7-0">
+<h4>Level Zero v1.7.0<a class="headerlink" href="#level-zero-v1-7-0" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core</p>
+<ul>
+<li><p>Fix a spelling error in the core programming guide command queues section</p></li>
+<li><p>Minor fix to kernel timestamp example in programming guide</p></li>
+<li><p>Some fixes for kernel max group size extension</p></li>
+<li><p>Add clarification to immediate command lists execution</p></li>
+<li><p>Add system memory hint for memory advise</p></li>
+<li><p>Add API to set atomic properties of a shared allocation</p></li>
+<li><p>Add support for in-order lists</p></li>
+<li><p>Add support for flexible device hierarchy model</p></li>
+<li><p>Add ray tracing acceleration structure build experimental extension</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>Various updates for engine, fabric, device and memory</p></li>
+<li><p>Added Fabric Error Counters and API</p></li>
+<li><p>Update engine group descriptions</p></li>
+<li><p>Fixes to GetFabricPortMultiThroughput</p></li>
+</ul>
+</li>
+<li><p>Tools</p>
+<ul>
+<li><p>Minor formatting fix for metric export data</p></li>
+<li><p>Fix sample code for MetricGroupGetExportDataExp</p></li>
+<li><p>Promote ZET_METRIC_TYPE_IP_EXP out of experimental</p></li>
+<li><p>Fix ZET typo to conform to naming convention</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-6-10">
+<h4>Level Zero v1.6.10<a class="headerlink" href="#level-zero-v1-6-10" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core</p>
+<ul>
+<li><p>Clarify documentation on build logs lifetime</p></li>
+<li><p>Set pNext pointer to NULL in programming guide</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>Add support for machine independent calculation for metrics data</p></li>
+<li><p>Update metrics timer resolution to cycle/sec</p></li>
+</ul>
+</li>
+<li><p>Tools</p>
+<ul>
+<li><p>Fix html generation of metric export data example code</p></li>
+<li><p>Fix base type for zet_metric_global_timestamps_resolution_exp_t</p></li>
+</ul>
+</li>
+<li><p>Infrastructure (Scripts)</p>
+<ul>
+<li><p>Misc. formatting and infrastructure fixes</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-6-3">
+<h4>Level Zero v1.6.3<a class="headerlink" href="#level-zero-v1-6-3" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core</p>
+<ul>
+<li><p>Import SECURITY.md</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>Revert RAS Category and Fabric API changes, restoring backwards compatibility.</p></li>
+</ul>
+</li>
+<li><p>Infrastructure (Scripts)</p>
+<ul>
+<li><p>Update copyright year for publication.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-6-0">
+<h4>Level Zero v1.6.0<a class="headerlink" href="#level-zero-v1-6-0" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core Changes</p>
+<ul>
+<li><p>Add zeMemPutIpcHandle and zeEventPoolPutIpcHandle</p></li>
+<li><p>Add helper functions for IPC handle</p></li>
+<li><p>Add zeDriverGetLastResultString</p></li>
+<li><p>Add zeCommandListHostSynchronize</p></li>
+<li><p>Module build option clarification</p></li>
+<li><p>Introduce extension to query normalized kernel event timestamps</p></li>
+<li><p>Clarify image buffers format/layout restrictions</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>Extend the SYSMAN Frequency Domain list to include a MEDIA Domain</p></li>
+</ul>
+</li>
+<li><p>Infrastructure (Scripts)</p>
+<ul>
+<li><p>Fixup extension references and substitutions</p></li>
+<li><p>Fixup parser versions (add newer point releases to all_versions)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-5-17">
+<h4>Level Zero v1.5.17<a class="headerlink" href="#level-zero-v1-5-17" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Tool Changes</p>
+<ul>
+<li><p>Add missing version to global metrics timestamps extension</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-5-16">
+<h4>Level Zero v1.5.16<a class="headerlink" href="#level-zero-v1-5-16" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core Changes</p>
+<ul>
+<li><p>Clarify intended interpretation of 32-bit device id</p></li>
+<li><p>Clarify that zeContextMakeMemoryResident is a cross-platform API</p></li>
+<li><p>Clarify language for pString parameter of zeKernelGetSourceAttributes</p></li>
+<li><p>Add an extension to get the kernel max group size properties</p></li>
+<li><p>Fixup typo in PCI Properties extension example</p></li>
+</ul>
+</li>
+<li><p>Tool Changes</p>
+<ul>
+<li><p>Add extension for global metrics timestamps</p></li>
+</ul>
+</li>
+<li><p>Sysman Changes</p>
+<ul>
+<li><p>Explicitly state the timestamp unit for the memory bandwidth API</p></li>
+<li><p>Update value of ZES_MAX_RAS_ERROR_CATEGORY_COUNT macro</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-5-8">
+<h4>Level Zero v1.5.8<a class="headerlink" href="#level-zero-v1-5-8" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Infrastructure (Scripts)</p>
+<ul>
+<li><p>Remove nullptr error code from params with mbz trait</p></li>
+<li><p>Fix handling of mbz attributes</p></li>
+<li><p>Fix ze_device_properties_t in samples</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-5-0">
+<h4>Level Zero v1.5.0<a class="headerlink" href="#level-zero-v1-5-0" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core Changes</p>
+<ul>
+<li><p>Clarify that a context can also be used by sub-devices of devices</p></li>
+<li><p>Add an extension for bfloat16 conversions</p></li>
+<li><p>Relax restriction and allow ipc events with timestamps</p></li>
+<li><p>Add an extension to return the device IP version</p></li>
+<li><p>Move image view extension to standard</p></li>
+<li><p>Fix off-by-one error for maximum memory allocation size</p></li>
+<li><p>Add host support for IPC allocations</p></li>
+<li><p>Add sub-allocations properties extensions</p></li>
+<li><p>Clarify commands in an immediate command list may execute synchronously</p></li>
+<li><p>Add additional default errors</p></li>
+</ul>
+</li>
+<li><p>Tool Changes</p>
+<ul>
+<li><p>Add a deprecation message for ZET_ENABLE_API_TRACING_EXP</p></li>
+</ul>
+</li>
+<li><p>Sysman Changes</p>
+<ul>
+<li><p>RAS Category and Fabric API</p></li>
+<li><p>Remove out-of-date Sysman object hierarchy diagram</p></li>
+<li><p>Mark zesPowerGetLimits and zesPowerSetLimits as deprecated</p></li>
+<li><p>Separate APIs for initializing and enumerating sysman</p></li>
+<li><p>Correct documentation for zesMemoryGetBandwidth</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-4-8">
+<h4>Level Zero v1.4.8<a class="headerlink" href="#level-zero-v1-4-8" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core Changes</p>
+<ul>
+<li><p>Fix naming for some fabric extension function args.</p></li>
+</ul>
+</li>
+<li><p>Sysman Changes</p>
+<ul>
+<li><p>Remove const for _zes_power_limit_ext_desc_t ouput params.</p></li>
+<li><p>Modify zes_power_level_t desc entry.</p></li>
+<li><p>Add missing structure type enums.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-4">
+<h4>Level Zero v1.4<a class="headerlink" href="#level-zero-v1-4" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core Changes</p>
+<ul>
+<li><p>Fabric Topology Discovery API extension added.</p></li>
+<li><p>Add detail to allocation access capabilities</p></li>
+<li><p>Add an extension to the Core API for obtaining memory BW</p></li>
+<li><p>Add clarifications for printf</p></li>
+<li><p>Add extension for querying device locally unique identifier</p></li>
+<li><p>Fix reordering of stypes</p></li>
+<li><p>Standardize use of desc in SetEccState</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-3">
+<h4>Level Zero v1.3<a class="headerlink" href="#level-zero-v1-3" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core Changes</p>
+<ul>
+<li><p>Add EU count extension.</p></li>
+<li><p>Add clarification that link log may contain unresolved symbols
+after dynamic linking.</p></li>
+<li><p>Add documentation for dynamic linking.</p></li>
+<li><p>Add extension for linkage inspection.</p></li>
+<li><p>Add extension for obtaining PCI BDF address.</p></li>
+<li><p>Clarify programming guide section on command queues &amp; command lists.</p></li>
+<li><p>Correct documentation regarding maxMemoryFillPatternSize.</p></li>
+<li><p>Clarify that pNext should be nullptr as default.</p></li>
+<li><p>Clarify that unsupported structure types in pNext are ignored.</p></li>
+<li><p>Add extension for image copy to/from memory that permits pitch
+within the memory buffer.</p></li>
+<li><p>Add support for sRGB.</p></li>
+<li><p>Clarify that zeInit needs to be called after forking processes.</p></li>
+<li><p>Clarify barrier execution semantics for zeCommandListAppendBarrier.</p></li>
+<li><p>Add an extension for querying image allocation properties.</p></li>
+<li><p>Add an experimental extension to supply compression hints.</p></li>
+</ul>
+</li>
+<li><p>Tools Changes</p>
+<ul>
+<li><p>Add experimental extension for calculating multiple metrics.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-2">
+<h4>Level Zero v1.2<a class="headerlink" href="#level-zero-v1-2" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core Changes</p>
+<ul>
+<li><p>Added alloc flags for device and host initial placement.</p></li>
+<li><p>Fix spec references.</p></li>
+<li><p>Add clarification that SPIR-V import and export linkage types are
+used.</p></li>
+<li><p>Add VPU to ze_device_type_t and ze_init_flags_t.</p></li>
+<li><p>Add -ze-opt-level build option.</p></li>
+<li><p>Add kernel scheduling hints experimental extension.</p></li>
+<li><p>Add extended subgroups extension.</p></li>
+<li><p>Add image view planar extension.</p></li>
+<li><p>Add image view extension.</p></li>
+<li><p>Add additional kernel preferred group size properties.</p></li>
+<li><p>Add SPIR-V extension for linkonce-odr.</p></li>
+<li><p>Add cache biasing flags for IPC handles.</p></li>
+<li><p>Add documentation pages for extensions.</p></li>
+<li><p>Add kernel scheduling hints for thread arbitration policy.</p></li>
+<li><p>Add image memory properties experimental extension.</p></li>
+<li><p>Add Event Query Timestamps experimental extension.</p></li>
+<li><p>Fix compatibility issue device time resolution.</p></li>
+<li><p>Add RGBP and BRGP image formats.</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>New return codes for low power state.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-1">
+<h4>Level Zero v1.1<a class="headerlink" href="#level-zero-v1-1" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core Changes</p>
+<ul>
+<li><p>Add code example for interop sharing, importing Linux dma_buf as
+an external memory handle for device allocation.</p></li>
+<li><p>Clarify zeInit behavior regarding multiple calls with different
+flags or environment variables.</p></li>
+<li><p>Add experimental extension for global work offset property to be
+set on kernel.</p></li>
+<li><p>Update timeResolution units to double in device properties.</p></li>
+<li><p>Added zeDeviceGetGlobalTimestamps to return synchronized host and
+device global timestamps.</p></li>
+<li><p>Clarification on non-standard extensions via
+zeDriverGetExtensionFunctionAddress.</p></li>
+<li><p>Clarifications for execution behavior for submitting multiple
+command lists</p></li>
+<li><p>Add zeContextCreateEx to support context visibility for one or
+more device objects.</p></li>
+<li><p>Specify that kernel state is not stored in thread-local storage by
+implementation.</p></li>
+<li><p>Add float atomics extension to support additional floating point
+atomics capabilities.</p></li>
+<li><p>Add extension to relax allocation limits and allow for allocations
+&gt; 4GB.</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>Fix bug in fan spec. The fan configuration zes_fan_config_t should
+point to the table structure zes_fan_table_t instead of one
+temp/speed pair.</p></li>
+</ul>
+</li>
+<li><p>Tools</p>
+<ul>
+<li><p>Add page fault debug event ZE_DEBUG_EVENT_TYPE_PAGE_FAULT.</p></li>
+<li><p>Clarification for metric group properties.</p></li>
+<li><p>Remove phWaitEvents parameters from zetCommandListAppendMetricQueryEnd.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v1-0">
+<h4>Level Zero v1.0<a class="headerlink" href="#level-zero-v1-0" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Core Changes</p>
+<ul>
+<li><p>Update command queue group properties to indicate numQueues is
+number of physical engines.</p></li>
+<li><p>Clarify ‘Get’ parameters such that the pCount description is more
+clear to what is return in array.</p></li>
+<li><p>Clarify metrics flag in ze_command_queue_group_property_flags_t.</p></li>
+<li><p>Fix API documentation to indicate that pIpcProperties argument is
+[in,out] for GetIpcProperties.</p></li>
+<li><p>Add experimental extension “ze_experimental_module_program” to
+support compiling and linking multiple SPIR-V modules together.</p></li>
+<li><p>Updates to Raytracing extension.</p></li>
+<li><p>Clean up Introduction documentation to remove reference to CSA and
+update ABI compatibility.</p></li>
+<li><p>Fix PG documentation error for -g build flag in Module Build
+Options section.</p></li>
+<li><p>Clarify in PG the default signal / wait event behavior.</p></li>
+<li><p>Add cooperative kernel launch code snippet in PG.</p></li>
+<li><p>Clarify that app must ensure the location in the pool is not being
+used by another event in zeEventCreate.</p></li>
+</ul>
+</li>
+<li><p>Sysman</p>
+<ul>
+<li><p>Update PG to describe that both min and max temperatures across
+sensors will be included in temp components.</p></li>
+<li><p>Clarify fan configuration comment to indicate that fan temp/speeds
+are passed back as table.</p></li>
+<li><p>Fixed comment showing how to calculate %allocated and %free memory
+in memory state structure.</p></li>
+<li><p>Clean up ambiguous comments in the function and structures for
+scheduler and memory components.</p></li>
+</ul>
+</li>
+<li><p>Tools</p>
+<ul>
+<li><p>Fix wrong type in pseudo-code for API Tracing documentation.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="level-zero-v0-95">
+<h4>Level Zero v0.95<a class="headerlink" href="#level-zero-v0-95" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Updates from implementation team.</p></li>
+</ul>
+</div>
+<div class="section" id="level-zero-v0-91">
+<h4>Level Zero v0.91<a class="headerlink" href="#level-zero-v0-91" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Initial release</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oneapi-specification">oneAPI Specification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#release-notes">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rev-1">1.3 rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#provisional-rev-1">1.3 provisional rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1.2 rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1.2 provisional rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1.1 rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#provisional-rev-2">1.1 provisional rev 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">1.1 provisional rev 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rev-2">1.0 rev 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1.0 rev 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oneipl">oneIPL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#oneipl-v0-6">oneIPL v0.6</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#oneipl-v0-5">oneIPL v0.5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onedtl">oneDTL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onedtl-v0-5">oneDTL v0.5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ray-tracing">Ray Tracing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ray-tracing-v0-5">Ray Tracing v0.5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph">oneDNN Graph</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v1-0-beta">oneDNN Graph v1.0-beta</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v1-0-alpha">oneDNN Graph v1.0-alpha</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v0-9">oneDNN Graph v0.9</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v0-8">oneDNN Graph v0.8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onednn-graph-v0-5">oneDNN Graph v0.5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl">oneVPL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-9-0">oneVPL v2.9.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-8-0">oneVPL v2.8.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-7-1">oneVPL v2.7.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-7-0">oneVPL v2.7.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-6-0">oneVPL v2.6.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-5-0">oneVPL v2.5.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-4-0">oneVPL v2.4.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#onevpl-v2-3-1">oneVPL v2.3.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero">Level Zero</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Release Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-9-3">Level Zero v1.9.3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-9-2">Level Zero v1.9.2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-9-1">Level Zero v1.9.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-9-0">Level Zero v1.9.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-8-0">Level Zero v1.8.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-7-8">Level Zero v1.7.8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-7-0">Level Zero v1.7.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-6-10">Level Zero v1.6.10</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-6-3">Level Zero v1.6.3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-6-0">Level Zero v1.6.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-5-17">Level Zero v1.5.17</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-5-16">Level Zero v1.5.16</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-5-8">Level Zero v1.5.8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-5-0">Level Zero v1.5.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-4-8">Level Zero v1.4.8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-4">Level Zero v1.4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-3">Level Zero v1.3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-2">Level Zero v1.2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-1">Level Zero v1.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v1-0">Level Zero v1.0</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v0-95">Level Zero v0.95</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#level-zero-v0-91">Level Zero v0.91</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021, Intel Corporation.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
