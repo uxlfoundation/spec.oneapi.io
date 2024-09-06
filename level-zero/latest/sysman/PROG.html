@@ -379,7 +379,8 @@ control the power and performance of accelerator devices.</p>
 <section id="environment-variables">
 <h3>Environment Variables<a class="headerlink" href="#environment-variables" title="Link to this heading">#</a></h3>
 <p>The System Resource Management library may now be initialized without using environment variables by calling <a class="reference internal" href="api.html#zesinit"><span class="std std-ref">zesInit</span></a>.</p>
-<p>For compatibility, the following environment variables may also be enabled during initialization for the respective feature.</p>
+<p>For compatibility, the following environment variables may also be enabled during initialization for the respective feature.
+It is recommended to initialize sysman either by calling <a class="reference internal" href="api.html#zesinit"><span class="std std-ref">zesInit</span></a> or using the following environment variables but not both.</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Category</p></th>

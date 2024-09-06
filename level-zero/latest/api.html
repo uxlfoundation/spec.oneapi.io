@@ -365,6 +365,7 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N11ze_result_t41ZE_RESULT_ERROR_INVALID_COMMAND_LIST_TYPEE"><code class="docutils literal notranslate"><span class="pre">ze_result_t::ZE_RESULT_ERROR_INVALID_COMMAND_LIST_TYPE</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N11ze_result_t35ZE_RESULT_ERROR_OVERLAPPING_REGIONSE"><code class="docutils literal notranslate"><span class="pre">ze_result_t::ZE_RESULT_ERROR_OVERLAPPING_REGIONS</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N11ze_result_t33ZE_RESULT_WARNING_ACTION_REQUIREDE"><code class="docutils literal notranslate"><span class="pre">ze_result_t::ZE_RESULT_WARNING_ACTION_REQUIRED</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N11ze_result_t37ZE_RESULT_ERROR_INVALID_KERNEL_HANDLEE"><code class="docutils literal notranslate"><span class="pre">ze_result_t::ZE_RESULT_ERROR_INVALID_KERNEL_HANDLE</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N11ze_result_t23ZE_RESULT_ERROR_UNKNOWNE"><code class="docutils literal notranslate"><span class="pre">ze_result_t::ZE_RESULT_ERROR_UNKNOWN</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N11ze_result_t22ZE_RESULT_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">ze_result_t::ZE_RESULT_FORCE_UINT32</span></code></a></li>
 </ul>
@@ -458,6 +459,8 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N19ze_structure_type_t53ZE_STRUCTURE_TYPE_PITCHED_ALLOC_DEVICE_EXP_PROPERTIESE"><code class="docutils literal notranslate"><span class="pre">ze_structure_type_t::ZE_STRUCTURE_TYPE_PITCHED_ALLOC_DEVICE_EXP_PROPERTIES</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N19ze_structure_type_t41ZE_STRUCTURE_TYPE_BINDLESS_IMAGE_EXP_DESCE"><code class="docutils literal notranslate"><span class="pre">ze_structure_type_t::ZE_STRUCTURE_TYPE_BINDLESS_IMAGE_EXP_DESC</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N19ze_structure_type_t40ZE_STRUCTURE_TYPE_PITCHED_IMAGE_EXP_DESCE"><code class="docutils literal notranslate"><span class="pre">ze_structure_type_t::ZE_STRUCTURE_TYPE_PITCHED_IMAGE_EXP_DESC</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N19ze_structure_type_t49ZE_STRUCTURE_TYPE_MUTABLE_GRAPH_ARGUMENT_EXP_DESCE"><code class="docutils literal notranslate"><span class="pre">ze_structure_type_t::ZE_STRUCTURE_TYPE_MUTABLE_GRAPH_ARGUMENT_EXP_DESC</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N19ze_structure_type_t39ZE_STRUCTURE_TYPE_INIT_DRIVER_TYPE_DESCE"><code class="docutils literal notranslate"><span class="pre">ze_structure_type_t::ZE_STRUCTURE_TYPE_INIT_DRIVER_TYPE_DESC</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N19ze_structure_type_t30ZE_STRUCTURE_TYPE_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">ze_structure_type_t::ZE_STRUCTURE_TYPE_FORCE_UINT32</span></code></a></li>
 </ul>
 </li>
@@ -561,6 +564,10 @@ document.write(`
 <li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv411zeDriverGetP8uint32_tP18ze_driver_handle_t"><code class="docutils literal notranslate"><span class="pre">zeDriverGet()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#zeinitdrivers">zeInitDrivers</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv413zeInitDriversP8uint32_tP18ze_driver_handle_tP26ze_init_driver_type_desc_t"><code class="docutils literal notranslate"><span class="pre">zeInitDrivers()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="core/api.html#zedrivergetapiversion">zeDriverGetApiVersion</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv421zeDriverGetApiVersion18ze_driver_handle_tP16ze_api_version_t"><code class="docutils literal notranslate"><span class="pre">zeDriverGetApiVersion()</span></code></a></li>
 </ul>
@@ -597,6 +604,15 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-init-driver-type-flags-t">ze_init_driver_type_flags_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv426ze_init_driver_type_flag_t"><code class="docutils literal notranslate"><span class="pre">ze_init_driver_type_flag_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N26ze_init_driver_type_flag_t28ZE_INIT_DRIVER_TYPE_FLAG_GPUE"><code class="docutils literal notranslate"><span class="pre">ze_init_driver_type_flag_t::ZE_INIT_DRIVER_TYPE_FLAG_GPU</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N26ze_init_driver_type_flag_t28ZE_INIT_DRIVER_TYPE_FLAG_NPUE"><code class="docutils literal notranslate"><span class="pre">ze_init_driver_type_flag_t::ZE_INIT_DRIVER_TYPE_FLAG_NPU</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N26ze_init_driver_type_flag_t37ZE_INIT_DRIVER_TYPE_FLAG_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">ze_init_driver_type_flag_t::ZE_INIT_DRIVER_TYPE_FLAG_FORCE_UINT32</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-api-version-t">ze_api_version_t</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv416ze_api_version_t"><code class="docutils literal notranslate"><span class="pre">ze_api_version_t</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N16ze_api_version_t18ZE_API_VERSION_1_0E"><code class="docutils literal notranslate"><span class="pre">ze_api_version_t::ZE_API_VERSION_1_0</span></code></a></li>
@@ -627,6 +643,15 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="core/api.html#driver-structures">Driver Structures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-init-driver-type-desc-t">ze_init_driver_type_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv426ze_init_driver_type_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_init_driver_type_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N26ze_init_driver_type_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_init_driver_type_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N26ze_init_driver_type_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_init_driver_type_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N26ze_init_driver_type_desc_t5flagsE"><code class="docutils literal notranslate"><span class="pre">ze_init_driver_type_desc_t::flags</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-driver-uuid-t">ze_driver_uuid_t</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv416ze_driver_uuid_t"><code class="docutils literal notranslate"><span class="pre">ze_driver_uuid_t</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N16ze_driver_uuid_t2idE"><code class="docutils literal notranslate"><span class="pre">ze_driver_uuid_t::id</span></code></a></li>
@@ -2449,6 +2474,169 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="core/api.html#mutablecommandlist">Mutablecommandlist</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core/api.html#mutablecommandlist-functions">Mutablecommandlist Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistgetnextcommandidexp">zeCommandListGetNextCommandIdExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv432zeCommandListGetNextCommandIdExp24ze_command_list_handle_tPK32ze_mutable_command_id_exp_desc_tP8uint64_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListGetNextCommandIdExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistgetnextcommandidwithkernelsexp">zeCommandListGetNextCommandIdWithKernelsExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv443zeCommandListGetNextCommandIdWithKernelsExp24ze_command_list_handle_tPK32ze_mutable_command_id_exp_desc_t8uint32_tP18ze_kernel_handle_tP8uint64_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListGetNextCommandIdWithKernelsExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistupdatemutablecommandsexp">zeCommandListUpdateMutableCommandsExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv437zeCommandListUpdateMutableCommandsExp24ze_command_list_handle_tPK30ze_mutable_commands_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListUpdateMutableCommandsExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistupdatemutablecommandsignaleventexp">zeCommandListUpdateMutableCommandSignalEventExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv447zeCommandListUpdateMutableCommandSignalEventExp24ze_command_list_handle_t8uint64_t17ze_event_handle_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListUpdateMutableCommandSignalEventExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistupdatemutablecommandwaiteventsexp">zeCommandListUpdateMutableCommandWaitEventsExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv446zeCommandListUpdateMutableCommandWaitEventsExp24ze_command_list_handle_t8uint64_t8uint32_tP17ze_event_handle_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListUpdateMutableCommandWaitEventsExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistupdatemutablecommandkernelsexp">zeCommandListUpdateMutableCommandKernelsExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv443zeCommandListUpdateMutableCommandKernelsExp24ze_command_list_handle_t8uint32_tP8uint64_tP18ze_kernel_handle_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListUpdateMutableCommandKernelsExp()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="core/api.html#mutablecommandlist-enums">Mutablecommandlist Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-list-exp-version-t">ze_mutable_command_list_exp_version_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv437ze_mutable_command_list_exp_version_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_version_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_command_list_exp_version_t39ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_1_0E"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_version_t::ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_1_0</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_command_list_exp_version_t39ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_1_1E"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_version_t::ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_1_1</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_command_list_exp_version_t43ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_CURRENTE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_version_t::ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_CURRENT</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_command_list_exp_version_t48ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_version_t::ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_FORCE_UINT32</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-exp-flags-t">ze_mutable_command_exp_flags_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv429ze_mutable_command_exp_flag_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t44ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_ARGUMENTSE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_ARGUMENTS</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t39ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_COUNTE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_COUNT</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t38ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_SIZEE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_SIZE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t41ZE_MUTABLE_COMMAND_EXP_FLAG_GLOBAL_OFFSETE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_GLOBAL_OFFSET</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t40ZE_MUTABLE_COMMAND_EXP_FLAG_SIGNAL_EVENTE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_SIGNAL_EVENT</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t39ZE_MUTABLE_COMMAND_EXP_FLAG_WAIT_EVENTSE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_WAIT_EVENTS</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t46ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_INSTRUCTIONE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_INSTRUCTION</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t43ZE_MUTABLE_COMMAND_EXP_FLAG_GRAPH_ARGUMENTSE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_GRAPH_ARGUMENTS</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t40ZE_MUTABLE_COMMAND_EXP_FLAG_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_FORCE_UINT32</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-list-exp-flags-t">ze_mutable_command_list_exp_flags_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv434ze_mutable_command_list_exp_flag_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_flag_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_flag_t41ZE_MUTABLE_COMMAND_LIST_EXP_FLAG_RESERVEDE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_flag_t::ZE_MUTABLE_COMMAND_LIST_EXP_FLAG_RESERVED</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_flag_t45ZE_MUTABLE_COMMAND_LIST_EXP_FLAG_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_flag_t::ZE_MUTABLE_COMMAND_LIST_EXP_FLAG_FORCE_UINT32</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="core/api.html#mutablecommandlist-structures">Mutablecommandlist Structures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-id-exp-desc-t">ze_mutable_command_id_exp_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv432ze_mutable_command_id_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_id_exp_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_command_id_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_id_exp_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_command_id_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_id_exp_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_command_id_exp_desc_t5flagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_id_exp_desc_t::flags</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-list-exp-properties-t">ze_mutable_command_list_exp_properties_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv440ze_mutable_command_list_exp_properties_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N40ze_mutable_command_list_exp_properties_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N40ze_mutable_command_list_exp_properties_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N40ze_mutable_command_list_exp_properties_t23mutableCommandListFlagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t::mutableCommandListFlags</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N40ze_mutable_command_list_exp_properties_t19mutableCommandFlagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t::mutableCommandFlags</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-list-exp-desc-t">ze_mutable_command_list_exp_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv434ze_mutable_command_list_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_desc_t5flagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_desc_t::flags</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-commands-exp-desc-t">ze_mutable_commands_exp_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv430ze_mutable_commands_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_commands_exp_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N30ze_mutable_commands_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_commands_exp_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N30ze_mutable_commands_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_commands_exp_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N30ze_mutable_commands_exp_desc_t5flagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_commands_exp_desc_t::flags</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-kernel-argument-exp-desc-t">ze_mutable_kernel_argument_exp_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv437ze_mutable_kernel_argument_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t9commandIdE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::commandId</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t8argIndexE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::argIndex</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t7argSizeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::argSize</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t9pArgValueE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::pArgValue</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-group-count-exp-desc-t">ze_mutable_group_count_exp_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv433ze_mutable_group_count_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N33ze_mutable_group_count_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N33ze_mutable_group_count_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N33ze_mutable_group_count_exp_desc_t9commandIdE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t::commandId</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N33ze_mutable_group_count_exp_desc_t11pGroupCountE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t::pGroupCount</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-group-size-exp-desc-t">ze_mutable_group_size_exp_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv432ze_mutable_group_size_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t9commandIdE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::commandId</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t10groupSizeXE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::groupSizeX</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t10groupSizeYE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::groupSizeY</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t10groupSizeZE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::groupSizeZ</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-global-offset-exp-desc-t">ze_mutable_global_offset_exp_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv435ze_mutable_global_offset_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t9commandIdE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::commandId</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t7offsetXE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::offsetX</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t7offsetYE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::offsetY</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t7offsetZE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::offsetZ</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-graph-argument-exp-desc-t">ze_mutable_graph_argument_exp_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv436ze_mutable_graph_argument_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_graph_argument_exp_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N36ze_mutable_graph_argument_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_graph_argument_exp_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N36ze_mutable_graph_argument_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_graph_argument_exp_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N36ze_mutable_graph_argument_exp_desc_t9commandIdE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_graph_argument_exp_desc_t::commandId</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N36ze_mutable_graph_argument_exp_desc_t8argIndexE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_graph_argument_exp_desc_t::argIndex</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N36ze_mutable_graph_argument_exp_desc_t9pArgValueE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_graph_argument_exp_desc_t::pArgValue</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="core/api.html#relaxedalloclimits">Relaxedalloclimits</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="core/api.html#relaxedalloclimits-enums">Relaxedalloclimits Enums</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-relaxed-allocation-limits-exp-version-t">ze_relaxed_allocation_limits_exp_version_t</a><ul>
@@ -4021,147 +4209,6 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="core/api.html#mutablecommandlist">Mutablecommandlist</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core/api.html#mutablecommandlist-functions">Mutablecommandlist Functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistgetnextcommandidexp">zeCommandListGetNextCommandIdExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv432zeCommandListGetNextCommandIdExp24ze_command_list_handle_tPK32ze_mutable_command_id_exp_desc_tP8uint64_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListGetNextCommandIdExp()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistupdatemutablecommandsexp">zeCommandListUpdateMutableCommandsExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv437zeCommandListUpdateMutableCommandsExp24ze_command_list_handle_tPK30ze_mutable_commands_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListUpdateMutableCommandsExp()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistupdatemutablecommandsignaleventexp">zeCommandListUpdateMutableCommandSignalEventExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv447zeCommandListUpdateMutableCommandSignalEventExp24ze_command_list_handle_t8uint64_t17ze_event_handle_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListUpdateMutableCommandSignalEventExp()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#zecommandlistupdatemutablecommandwaiteventsexp">zeCommandListUpdateMutableCommandWaitEventsExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv446zeCommandListUpdateMutableCommandWaitEventsExp24ze_command_list_handle_t8uint64_t8uint32_tP17ze_event_handle_t"><code class="docutils literal notranslate"><span class="pre">zeCommandListUpdateMutableCommandWaitEventsExp()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="core/api.html#mutablecommandlist-enums">Mutablecommandlist Enums</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-list-exp-version-t">ze_mutable_command_list_exp_version_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv437ze_mutable_command_list_exp_version_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_version_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_command_list_exp_version_t39ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_1_0E"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_version_t::ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_1_0</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_command_list_exp_version_t43ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_CURRENTE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_version_t::ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_CURRENT</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_command_list_exp_version_t48ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_version_t::ZE_MUTABLE_COMMAND_LIST_EXP_VERSION_FORCE_UINT32</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-exp-flags-t">ze_mutable_command_exp_flags_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv429ze_mutable_command_exp_flag_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t44ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_ARGUMENTSE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_ARGUMENTS</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t39ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_COUNTE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_COUNT</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t38ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_SIZEE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_SIZE</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t41ZE_MUTABLE_COMMAND_EXP_FLAG_GLOBAL_OFFSETE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_GLOBAL_OFFSET</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t40ZE_MUTABLE_COMMAND_EXP_FLAG_SIGNAL_EVENTE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_SIGNAL_EVENT</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t39ZE_MUTABLE_COMMAND_EXP_FLAG_WAIT_EVENTSE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_WAIT_EVENTS</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N29ze_mutable_command_exp_flag_t40ZE_MUTABLE_COMMAND_EXP_FLAG_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_exp_flag_t::ZE_MUTABLE_COMMAND_EXP_FLAG_FORCE_UINT32</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-list-exp-flags-t">ze_mutable_command_list_exp_flags_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv434ze_mutable_command_list_exp_flag_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_flag_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_flag_t41ZE_MUTABLE_COMMAND_LIST_EXP_FLAG_RESERVEDE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_flag_t::ZE_MUTABLE_COMMAND_LIST_EXP_FLAG_RESERVED</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_flag_t45ZE_MUTABLE_COMMAND_LIST_EXP_FLAG_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_flag_t::ZE_MUTABLE_COMMAND_LIST_EXP_FLAG_FORCE_UINT32</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="core/api.html#mutablecommandlist-structures">Mutablecommandlist Structures</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-id-exp-desc-t">ze_mutable_command_id_exp_desc_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv432ze_mutable_command_id_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_id_exp_desc_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_command_id_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_id_exp_desc_t::stype</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_command_id_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_id_exp_desc_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_command_id_exp_desc_t5flagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_id_exp_desc_t::flags</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-list-exp-properties-t">ze_mutable_command_list_exp_properties_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv440ze_mutable_command_list_exp_properties_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N40ze_mutable_command_list_exp_properties_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t::stype</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N40ze_mutable_command_list_exp_properties_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N40ze_mutable_command_list_exp_properties_t23mutableCommandListFlagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t::mutableCommandListFlags</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N40ze_mutable_command_list_exp_properties_t19mutableCommandFlagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_properties_t::mutableCommandFlags</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-command-list-exp-desc-t">ze_mutable_command_list_exp_desc_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv434ze_mutable_command_list_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_desc_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_desc_t::stype</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_desc_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N34ze_mutable_command_list_exp_desc_t5flagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_command_list_exp_desc_t::flags</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-commands-exp-desc-t">ze_mutable_commands_exp_desc_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv430ze_mutable_commands_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_commands_exp_desc_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N30ze_mutable_commands_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_commands_exp_desc_t::stype</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N30ze_mutable_commands_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_commands_exp_desc_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N30ze_mutable_commands_exp_desc_t5flagsE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_commands_exp_desc_t::flags</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-kernel-argument-exp-desc-t">ze_mutable_kernel_argument_exp_desc_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv437ze_mutable_kernel_argument_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::stype</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t9commandIdE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::commandId</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t8argIndexE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::argIndex</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t7argSizeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::argSize</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N37ze_mutable_kernel_argument_exp_desc_t9pArgValueE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_kernel_argument_exp_desc_t::pArgValue</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-group-count-exp-desc-t">ze_mutable_group_count_exp_desc_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv433ze_mutable_group_count_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N33ze_mutable_group_count_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t::stype</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N33ze_mutable_group_count_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N33ze_mutable_group_count_exp_desc_t9commandIdE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t::commandId</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N33ze_mutable_group_count_exp_desc_t11pGroupCountE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_count_exp_desc_t::pGroupCount</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-group-size-exp-desc-t">ze_mutable_group_size_exp_desc_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv432ze_mutable_group_size_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::stype</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t9commandIdE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::commandId</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t10groupSizeXE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::groupSizeX</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t10groupSizeYE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::groupSizeY</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N32ze_mutable_group_size_exp_desc_t10groupSizeZE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_group_size_exp_desc_t::groupSizeZ</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="core/api.html#ze-mutable-global-offset-exp-desc-t">ze_mutable_global_offset_exp_desc_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="core/api.html#_CPPv435ze_mutable_global_offset_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::stype</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t9commandIdE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::commandId</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t7offsetXE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::offsetX</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t7offsetYE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::offsetY</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="core/api.html#_CPPv4N35ze_mutable_global_offset_exp_desc_t7offsetZE"><code class="docutils literal notranslate"><span class="pre">ze_mutable_global_offset_exp_desc_t::offsetZ</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tools/api.html">Tools API</a><ul>
@@ -4185,6 +4232,7 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_structure_type_t53ZET_STRUCTURE_TYPE_METRIC_PROGRAMMABLE_EXP_PROPERTIESE"><code class="docutils literal notranslate"><span class="pre">zet_structure_type_t::ZET_STRUCTURE_TYPE_METRIC_PROGRAMMABLE_EXP_PROPERTIES</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_structure_type_t53ZET_STRUCTURE_TYPE_METRIC_PROGRAMMABLE_PARAM_INFO_EXPE"><code class="docutils literal notranslate"><span class="pre">zet_structure_type_t::ZET_STRUCTURE_TYPE_METRIC_PROGRAMMABLE_PARAM_INFO_EXP</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_structure_type_t59ZET_STRUCTURE_TYPE_METRIC_PROGRAMMABLE_PARAM_VALUE_INFO_EXPE"><code class="docutils literal notranslate"><span class="pre">zet_structure_type_t::ZET_STRUCTURE_TYPE_METRIC_PROGRAMMABLE_PARAM_VALUE_INFO_EXP</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_structure_type_t41ZET_STRUCTURE_TYPE_METRIC_TRACER_EXP_DESCE"><code class="docutils literal notranslate"><span class="pre">zet_structure_type_t::ZET_STRUCTURE_TYPE_METRIC_TRACER_EXP_DESC</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_structure_type_t31ZET_STRUCTURE_TYPE_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zet_structure_type_t::ZET_STRUCTURE_TYPE_FORCE_UINT32</span></code></a></li>
 </ul>
 </li>
@@ -4380,6 +4428,7 @@ document.write(`
 <li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv429zet_debug_memory_space_type_t"><code class="docutils literal notranslate"><span class="pre">zet_debug_memory_space_type_t</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N29zet_debug_memory_space_type_t35ZET_DEBUG_MEMORY_SPACE_TYPE_DEFAULTE"><code class="docutils literal notranslate"><span class="pre">zet_debug_memory_space_type_t::ZET_DEBUG_MEMORY_SPACE_TYPE_DEFAULT</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N29zet_debug_memory_space_type_t31ZET_DEBUG_MEMORY_SPACE_TYPE_SLME"><code class="docutils literal notranslate"><span class="pre">zet_debug_memory_space_type_t::ZET_DEBUG_MEMORY_SPACE_TYPE_SLM</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N29zet_debug_memory_space_type_t31ZET_DEBUG_MEMORY_SPACE_TYPE_ELFE"><code class="docutils literal notranslate"><span class="pre">zet_debug_memory_space_type_t::ZET_DEBUG_MEMORY_SPACE_TYPE_ELF</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N29zet_debug_memory_space_type_t40ZET_DEBUG_MEMORY_SPACE_TYPE_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zet_debug_memory_space_type_t::ZET_DEBUG_MEMORY_SPACE_TYPE_FORCE_UINT32</span></code></a></li>
 </ul>
 </li>
@@ -4579,6 +4628,7 @@ document.write(`
 <li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv437zet_metric_group_sampling_type_flag_t"><code class="docutils literal notranslate"><span class="pre">zet_metric_group_sampling_type_flag_t</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N37zet_metric_group_sampling_type_flag_t47ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_EVENT_BASEDE"><code class="docutils literal notranslate"><span class="pre">zet_metric_group_sampling_type_flag_t::ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_EVENT_BASED</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N37zet_metric_group_sampling_type_flag_t46ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_TIME_BASEDE"><code class="docutils literal notranslate"><span class="pre">zet_metric_group_sampling_type_flag_t::ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_TIME_BASED</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N37zet_metric_group_sampling_type_flag_t52ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_EXP_TRACER_BASEDE"><code class="docutils literal notranslate"><span class="pre">zet_metric_group_sampling_type_flag_t::ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_EXP_TRACER_BASED</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N37zet_metric_group_sampling_type_flag_t48ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zet_metric_group_sampling_type_flag_t::ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_FORCE_UINT32</span></code></a></li>
 </ul>
 </li>
@@ -4596,6 +4646,10 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N17zet_metric_type_t19ZET_METRIC_TYPE_RAWE"><code class="docutils literal notranslate"><span class="pre">zet_metric_type_t::ZET_METRIC_TYPE_RAW</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N17zet_metric_type_t22ZET_METRIC_TYPE_IP_EXPE"><code class="docutils literal notranslate"><span class="pre">zet_metric_type_t::ZET_METRIC_TYPE_IP_EXP</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N17zet_metric_type_t18ZET_METRIC_TYPE_IPE"><code class="docutils literal notranslate"><span class="pre">zet_metric_type_t::ZET_METRIC_TYPE_IP</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N17zet_metric_type_t35ZET_METRIC_TYPE_EVENT_EXP_TIMESTAMPE"><code class="docutils literal notranslate"><span class="pre">zet_metric_type_t::ZET_METRIC_TYPE_EVENT_EXP_TIMESTAMP</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N17zet_metric_type_t31ZET_METRIC_TYPE_EVENT_EXP_STARTE"><code class="docutils literal notranslate"><span class="pre">zet_metric_type_t::ZET_METRIC_TYPE_EVENT_EXP_START</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N17zet_metric_type_t29ZET_METRIC_TYPE_EVENT_EXP_ENDE"><code class="docutils literal notranslate"><span class="pre">zet_metric_type_t::ZET_METRIC_TYPE_EVENT_EXP_END</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N17zet_metric_type_t47ZET_METRIC_TYPE_EVENT_EXP_MONOTONIC_WRAPS_VALUEE"><code class="docutils literal notranslate"><span class="pre">zet_metric_type_t::ZET_METRIC_TYPE_EVENT_EXP_MONOTONIC_WRAPS_VALUE</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N17zet_metric_type_t28ZET_METRIC_TYPE_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zet_metric_type_t::ZET_METRIC_TYPE_FORCE_UINT32</span></code></a></li>
 </ul>
 </li>
@@ -4784,6 +4838,105 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="tools/api.html#concurrentmetricgroup">Concurrentmetricgroup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools/api.html#concurrentmetricgroup-functions">Concurrentmetricgroup Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetdevicegetconcurrentmetricgroupsexp">zetDeviceGetConcurrentMetricGroupsExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv437zetDeviceGetConcurrentMetricGroupsExp19zet_device_handle_t8uint32_tP25zet_metric_group_handle_tP8uint32_tP8uint32_t"><code class="docutils literal notranslate"><span class="pre">zetDeviceGetConcurrentMetricGroupsExp()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tools/api.html#concurrentmetricgroup-enums">Concurrentmetricgroup Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zet-concurrent-metric-groups-exp-version-t">zet_concurrent_metric_groups_exp_version_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv442zet_concurrent_metric_groups_exp_version_t"><code class="docutils literal notranslate"><span class="pre">zet_concurrent_metric_groups_exp_version_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N42zet_concurrent_metric_groups_exp_version_t44ZET_CONCURRENT_METRIC_GROUPS_EXP_VERSION_1_0E"><code class="docutils literal notranslate"><span class="pre">zet_concurrent_metric_groups_exp_version_t::ZET_CONCURRENT_METRIC_GROUPS_EXP_VERSION_1_0</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N42zet_concurrent_metric_groups_exp_version_t48ZET_CONCURRENT_METRIC_GROUPS_EXP_VERSION_CURRENTE"><code class="docutils literal notranslate"><span class="pre">zet_concurrent_metric_groups_exp_version_t::ZET_CONCURRENT_METRIC_GROUPS_EXP_VERSION_CURRENT</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N42zet_concurrent_metric_groups_exp_version_t53ZET_CONCURRENT_METRIC_GROUPS_EXP_VERSION_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zet_concurrent_metric_groups_exp_version_t::ZET_CONCURRENT_METRIC_GROUPS_EXP_VERSION_FORCE_UINT32</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tools/api.html#metrictracer">Metrictracer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools/api.html#metrictracer-functions">Metrictracer Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetrictracercreateexp">zetMetricTracerCreateExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv424zetMetricTracerCreateExp20zet_context_handle_t19zet_device_handle_t8uint32_tP25zet_metric_group_handle_tP28zet_metric_tracer_exp_desc_t17ze_event_handle_tP30zet_metric_tracer_exp_handle_t"><code class="docutils literal notranslate"><span class="pre">zetMetricTracerCreateExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetrictracerdestroyexp">zetMetricTracerDestroyExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv425zetMetricTracerDestroyExp30zet_metric_tracer_exp_handle_t"><code class="docutils literal notranslate"><span class="pre">zetMetricTracerDestroyExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetrictracerenableexp">zetMetricTracerEnableExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv424zetMetricTracerEnableExp30zet_metric_tracer_exp_handle_t9ze_bool_t"><code class="docutils literal notranslate"><span class="pre">zetMetricTracerEnableExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetrictracerdisableexp">zetMetricTracerDisableExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv425zetMetricTracerDisableExp30zet_metric_tracer_exp_handle_t9ze_bool_t"><code class="docutils literal notranslate"><span class="pre">zetMetricTracerDisableExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetrictracerreaddataexp">zetMetricTracerReadDataExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv426zetMetricTracerReadDataExp30zet_metric_tracer_exp_handle_tP6size_tP7uint8_t"><code class="docutils literal notranslate"><span class="pre">zetMetricTracerReadDataExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetricdecodercreateexp">zetMetricDecoderCreateExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv425zetMetricDecoderCreateExp30zet_metric_tracer_exp_handle_tP31zet_metric_decoder_exp_handle_t"><code class="docutils literal notranslate"><span class="pre">zetMetricDecoderCreateExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetricdecoderdestroyexp">zetMetricDecoderDestroyExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv426zetMetricDecoderDestroyExp31zet_metric_decoder_exp_handle_t"><code class="docutils literal notranslate"><span class="pre">zetMetricDecoderDestroyExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetricdecodergetdecodablemetricsexp">zetMetricDecoderGetDecodableMetricsExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv438zetMetricDecoderGetDecodableMetricsExp31zet_metric_decoder_exp_handle_tP8uint32_tP19zet_metric_handle_t"><code class="docutils literal notranslate"><span class="pre">zetMetricDecoderGetDecodableMetricsExp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetrictracerdecodeexp">zetMetricTracerDecodeExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv424zetMetricTracerDecodeExp31zet_metric_decoder_exp_handle_tP6size_tP7uint8_t8uint32_tP19zet_metric_handle_tP8uint32_tP8uint32_tP8uint32_tP22zet_metric_entry_exp_t"><code class="docutils literal notranslate"><span class="pre">zetMetricTracerDecodeExp()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tools/api.html#metrictracer-enums">Metrictracer Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zet-metric-tracer-exp-version-t">zet_metric_tracer_exp_version_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv431zet_metric_tracer_exp_version_t"><code class="docutils literal notranslate"><span class="pre">zet_metric_tracer_exp_version_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N31zet_metric_tracer_exp_version_t33ZET_METRIC_TRACER_EXP_VERSION_1_0E"><code class="docutils literal notranslate"><span class="pre">zet_metric_tracer_exp_version_t::ZET_METRIC_TRACER_EXP_VERSION_1_0</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N31zet_metric_tracer_exp_version_t37ZET_METRIC_TRACER_EXP_VERSION_CURRENTE"><code class="docutils literal notranslate"><span class="pre">zet_metric_tracer_exp_version_t::ZET_METRIC_TRACER_EXP_VERSION_CURRENT</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N31zet_metric_tracer_exp_version_t42ZET_METRIC_TRACER_EXP_VERSION_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zet_metric_tracer_exp_version_t::ZET_METRIC_TRACER_EXP_VERSION_FORCE_UINT32</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tools/api.html#metrictracer-structures">Metrictracer Structures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zet-metric-tracer-exp-desc-t">zet_metric_tracer_exp_desc_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv428zet_metric_tracer_exp_desc_t"><code class="docutils literal notranslate"><span class="pre">zet_metric_tracer_exp_desc_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N28zet_metric_tracer_exp_desc_t5stypeE"><code class="docutils literal notranslate"><span class="pre">zet_metric_tracer_exp_desc_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N28zet_metric_tracer_exp_desc_t5pNextE"><code class="docutils literal notranslate"><span class="pre">zet_metric_tracer_exp_desc_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N28zet_metric_tracer_exp_desc_t17notifyEveryNBytesE"><code class="docutils literal notranslate"><span class="pre">zet_metric_tracer_exp_desc_t::notifyEveryNBytes</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zet-metric-entry-exp-t">zet_metric_entry_exp_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv422zet_metric_entry_exp_t"><code class="docutils literal notranslate"><span class="pre">zet_metric_entry_exp_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N22zet_metric_entry_exp_t5valueE"><code class="docutils literal notranslate"><span class="pre">zet_metric_entry_exp_t::value</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N22zet_metric_entry_exp_t9timeStampE"><code class="docutils literal notranslate"><span class="pre">zet_metric_entry_exp_t::timeStamp</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N22zet_metric_entry_exp_t11metricIndexE"><code class="docutils literal notranslate"><span class="pre">zet_metric_entry_exp_t::metricIndex</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N22zet_metric_entry_exp_t11onSubdeviceE"><code class="docutils literal notranslate"><span class="pre">zet_metric_entry_exp_t::onSubdevice</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N22zet_metric_entry_exp_t11subdeviceIdE"><code class="docutils literal notranslate"><span class="pre">zet_metric_entry_exp_t::subdeviceId</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="tools/api.html#multimetricvalues">Multimetricvalues</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tools/api.html#multimetricvalues-functions">Multimetricvalues Functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetricgroupcalculatemultiplemetricvaluesexp">zetMetricGroupCalculateMultipleMetricValuesExp</a><ul>
@@ -4898,11 +5051,11 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetriccreatefromprogrammableexp">zetMetricCreateFromProgrammableExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv434zetMetricCreateFromProgrammableExp36zet_metric_programmable_exp_handle_tP41zet_metric_programmable_param_value_exp_t8uint32_tPKcPKcP8uint32_tP19zet_metric_handle_t"><code class="docutils literal notranslate"><span class="pre">zetMetricCreateFromProgrammableExp()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv434zetMetricCreateFromProgrammableExp36zet_metric_programmable_exp_handle_t8uint32_tP41zet_metric_programmable_param_value_exp_tPKcPKcP8uint32_tP19zet_metric_handle_t"><code class="docutils literal notranslate"><span class="pre">zetMetricCreateFromProgrammableExp()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetricgroupcreateexp">zetMetricGroupCreateExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv423zetMetricGroupCreateExp19zet_device_handle_tPKcPKc38zet_metric_group_sampling_type_flags_tP25zet_metric_group_handle_t"><code class="docutils literal notranslate"><span class="pre">zetMetricGroupCreateExp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetdevicecreatemetricgroupsfrommetricsexp">zetDeviceCreateMetricGroupsFromMetricsExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv441zetDeviceCreateMetricGroupsFromMetricsExp19zet_device_handle_t8uint32_tP19zet_metric_handle_tPKcPKcP8uint32_tP25zet_metric_group_handle_t"><code class="docutils literal notranslate"><span class="pre">zetDeviceCreateMetricGroupsFromMetricsExp()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="tools/api.html#zetmetricgroupaddmetricexp">zetMetricGroupAddMetricExp</a><ul>
@@ -4930,7 +5083,7 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="tools/api.html#metricprogrammable-enums">Metricprogrammable Enums</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tools/api.html#zet-metric-programmable-exp-version-t">zet_metric_programmable_exp_version_t</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv437zet_metric_programmable_exp_version_t"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_exp_version_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N37zet_metric_programmable_exp_version_t39ZET_METRIC_PROGRAMMABLE_EXP_VERSION_1_0E"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_exp_version_t::ZET_METRIC_PROGRAMMABLE_EXP_VERSION_1_0</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N37zet_metric_programmable_exp_version_t39ZET_METRIC_PROGRAMMABLE_EXP_VERSION_1_1E"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_exp_version_t::ZET_METRIC_PROGRAMMABLE_EXP_VERSION_1_1</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N37zet_metric_programmable_exp_version_t43ZET_METRIC_PROGRAMMABLE_EXP_VERSION_CURRENTE"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_exp_version_t::ZET_METRIC_PROGRAMMABLE_EXP_VERSION_CURRENT</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N37zet_metric_programmable_exp_version_t48ZET_METRIC_PROGRAMMABLE_EXP_VERSION_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_exp_version_t::ZET_METRIC_PROGRAMMABLE_EXP_VERSION_FORCE_UINT32</span></code></a></li>
 </ul>
@@ -4944,6 +5097,7 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N40zet_metric_programmable_param_type_exp_t64ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_NORMALIZATION_UTILIZATIONE"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_param_type_exp_t::ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_NORMALIZATION_UTILIZATION</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N40zet_metric_programmable_param_type_exp_t60ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_NORMALIZATION_AVERAGEE"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_param_type_exp_t::ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_NORMALIZATION_AVERAGE</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N40zet_metric_programmable_param_type_exp_t57ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_NORMALIZATION_RATEE"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_param_type_exp_t::ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_NORMALIZATION_RATE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N40zet_metric_programmable_param_type_exp_t58ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_NORMALIZATION_BYTESE"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_param_type_exp_t::ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_NORMALIZATION_BYTES</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N40zet_metric_programmable_param_type_exp_t51ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_param_type_exp_t::ZET_METRIC_PROGRAMMABLE_PARAM_TYPE_EXP_FORCE_UINT32</span></code></a></li>
 </ul>
 </li>
@@ -4956,10 +5110,10 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N25zet_value_info_type_exp_t31ZET_VALUE_INFO_TYPE_EXP_FLOAT32E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_type_exp_t::ZET_VALUE_INFO_TYPE_EXP_FLOAT32</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N25zet_value_info_type_exp_t31ZET_VALUE_INFO_TYPE_EXP_FLOAT64E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_type_exp_t::ZET_VALUE_INFO_TYPE_EXP_FLOAT64</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N25zet_value_info_type_exp_t29ZET_VALUE_INFO_TYPE_EXP_BOOL8E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_type_exp_t::ZET_VALUE_INFO_TYPE_EXP_BOOL8</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N25zet_value_info_type_exp_t31ZET_VALUE_INFO_TYPE_EXP_CSTRINGE"><code class="docutils literal notranslate"><span class="pre">zet_value_info_type_exp_t::ZET_VALUE_INFO_TYPE_EXP_CSTRING</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N25zet_value_info_type_exp_t29ZET_VALUE_INFO_TYPE_EXP_UINT8E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_type_exp_t::ZET_VALUE_INFO_TYPE_EXP_UINT8</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N25zet_value_info_type_exp_t30ZET_VALUE_INFO_TYPE_EXP_UINT16E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_type_exp_t::ZET_VALUE_INFO_TYPE_EXP_UINT16</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N25zet_value_info_type_exp_t36ZET_VALUE_INFO_TYPE_EXP_UINT64_RANGEE"><code class="docutils literal notranslate"><span class="pre">zet_value_info_type_exp_t::ZET_VALUE_INFO_TYPE_EXP_UINT64_RANGE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N25zet_value_info_type_exp_t37ZET_VALUE_INFO_TYPE_EXP_FLOAT64_RANGEE"><code class="docutils literal notranslate"><span class="pre">zet_value_info_type_exp_t::ZET_VALUE_INFO_TYPE_EXP_FLOAT64_RANGE</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N25zet_value_info_type_exp_t36ZET_VALUE_INFO_TYPE_EXP_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_type_exp_t::ZET_VALUE_INFO_TYPE_EXP_FORCE_UINT32</span></code></a></li>
 </ul>
 </li>
@@ -4992,6 +5146,14 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="tools/api.html#zet-value-fp64-range-exp-t">zet_value_fp64_range_exp_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv426zet_value_fp64_range_exp_t"><code class="docutils literal notranslate"><span class="pre">zet_value_fp64_range_exp_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N26zet_value_fp64_range_exp_t7fp64MinE"><code class="docutils literal notranslate"><span class="pre">zet_value_fp64_range_exp_t::fp64Min</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N26zet_value_fp64_range_exp_t7fp64MaxE"><code class="docutils literal notranslate"><span class="pre">zet_value_fp64_range_exp_t::fp64Max</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="tools/api.html#zet-value-info-exp-t">zet_value_info_exp_t</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="tools/api.html#_CPPv420zet_value_info_exp_t"><code class="docutils literal notranslate"><span class="pre">zet_value_info_exp_t</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_value_info_exp_t4ui32E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_exp_t::ui32</span></code></a></li>
@@ -5001,8 +5163,8 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_value_info_exp_t2b8E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_exp_t::b8</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_value_info_exp_t3ui8E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_exp_t::ui8</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_value_info_exp_t4ui16E"><code class="docutils literal notranslate"><span class="pre">zet_value_info_exp_t::ui16</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_value_info_exp_t7cStringE"><code class="docutils literal notranslate"><span class="pre">zet_value_info_exp_t::cString</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_value_info_exp_t9ui64RangeE"><code class="docutils literal notranslate"><span class="pre">zet_value_info_exp_t::ui64Range</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N20zet_value_info_exp_t9fp64RangeE"><code class="docutils literal notranslate"><span class="pre">zet_value_info_exp_t::fp64Range</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5025,6 +5187,7 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N46zet_metric_programmable_param_value_info_exp_t5stypeE"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_param_value_info_exp_t::stype</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N46zet_metric_programmable_param_value_info_exp_t5pNextE"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_param_value_info_exp_t::pNext</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N46zet_metric_programmable_param_value_info_exp_t9valueInfoE"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_param_value_info_exp_t::valueInfo</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="tools/api.html#_CPPv4N46zet_metric_programmable_param_value_info_exp_t11descriptionE"><code class="docutils literal notranslate"><span class="pre">zet_metric_programmable_param_value_info_exp_t::description</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5097,7 +5260,7 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N20zes_structure_type_t60ZES_STRUCTURE_TYPE_MEM_BANDWIDTH_COUNTER_BITS_EXP_PROPERTIESE"><code class="docutils literal notranslate"><span class="pre">zes_structure_type_t::ZES_STRUCTURE_TYPE_MEM_BANDWIDTH_COUNTER_BITS_EXP_PROPERTIES</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N20zes_structure_type_t48ZES_STRUCTURE_TYPE_MEMORY_PAGE_OFFLINE_STATE_EXPE"><code class="docutils literal notranslate"><span class="pre">zes_structure_type_t::ZES_STRUCTURE_TYPE_MEMORY_PAGE_OFFLINE_STATE_EXP</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N20zes_structure_type_t43ZES_STRUCTURE_TYPE_SUBDEVICE_EXP_PROPERTIESE"><code class="docutils literal notranslate"><span class="pre">zes_structure_type_t::ZES_STRUCTURE_TYPE_SUBDEVICE_EXP_PROPERTIES</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N20zes_structure_type_t36ZES_STRUCTURE_TYPE_VF_EXP_PROPERTIESE"><code class="docutils literal notranslate"><span class="pre">zes_structure_type_t::ZES_STRUCTURE_TYPE_VF_EXP_PROPERTIES</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N20zes_structure_type_t38ZES_STRUCTURE_TYPE_VF_EXP_CAPABILITIESE"><code class="docutils literal notranslate"><span class="pre">zes_structure_type_t::ZES_STRUCTURE_TYPE_VF_EXP_CAPABILITIES</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N20zes_structure_type_t34ZES_STRUCTURE_TYPE_VF_UTIL_MEM_EXPE"><code class="docutils literal notranslate"><span class="pre">zes_structure_type_t::ZES_STRUCTURE_TYPE_VF_UTIL_MEM_EXP</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N20zes_structure_type_t37ZES_STRUCTURE_TYPE_VF_UTIL_ENGINE_EXPE"><code class="docutils literal notranslate"><span class="pre">zes_structure_type_t::ZES_STRUCTURE_TYPE_VF_UTIL_ENGINE_EXP</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N20zes_structure_type_t31ZES_STRUCTURE_TYPE_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zes_structure_type_t::ZES_STRUCTURE_TYPE_FORCE_UINT32</span></code></a></li>
@@ -7125,6 +7288,7 @@ document.write(`
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N18zes_temp_sensors_t27ZES_TEMP_SENSORS_MEMORY_MINE"><code class="docutils literal notranslate"><span class="pre">zes_temp_sensors_t::ZES_TEMP_SENSORS_MEMORY_MIN</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N18zes_temp_sensors_t26ZES_TEMP_SENSORS_GPU_BOARDE"><code class="docutils literal notranslate"><span class="pre">zes_temp_sensors_t::ZES_TEMP_SENSORS_GPU_BOARD</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N18zes_temp_sensors_t30ZES_TEMP_SENSORS_GPU_BOARD_MINE"><code class="docutils literal notranslate"><span class="pre">zes_temp_sensors_t::ZES_TEMP_SENSORS_GPU_BOARD_MIN</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N18zes_temp_sensors_t34ZES_TEMP_SENSORS_VOLTAGE_REGULATORE"><code class="docutils literal notranslate"><span class="pre">zes_temp_sensors_t::ZES_TEMP_SENSORS_VOLTAGE_REGULATOR</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N18zes_temp_sensors_t29ZES_TEMP_SENSORS_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zes_temp_sensors_t::ZES_TEMP_SENSORS_FORCE_UINT32</span></code></a></li>
 </ul>
 </li>
@@ -7465,12 +7629,12 @@ document.write(`
 </li>
 <li class="toctree-l2"><a class="reference internal" href="sysman/api.html#virtualfunctionmanagement">Virtualfunctionmanagement</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="sysman/api.html#virtualfunctionmanagement-functions">Virtualfunctionmanagement Functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zesdeviceenumactivevfexp">zesDeviceEnumActiveVFExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv424zesDeviceEnumActiveVFExp19zes_device_handle_tP8uint32_tP15zes_vf_handle_t"><code class="docutils literal notranslate"><span class="pre">zesDeviceEnumActiveVFExp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zesdeviceenumenabledvfexp">zesDeviceEnumEnabledVFExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv425zesDeviceEnumEnabledVFExp19zes_device_handle_tP8uint32_tP15zes_vf_handle_t"><code class="docutils literal notranslate"><span class="pre">zesDeviceEnumEnabledVFExp()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zesvfmanagementgetvfpropertiesexp">zesVFManagementGetVFPropertiesExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv433zesVFManagementGetVFPropertiesExp15zes_vf_handle_tP23zes_vf_exp_properties_t"><code class="docutils literal notranslate"><span class="pre">zesVFManagementGetVFPropertiesExp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zesvfmanagementgetvfcapabilitiesexp">zesVFManagementGetVFCapabilitiesExp</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv435zesVFManagementGetVFCapabilitiesExp15zes_vf_handle_tP25zes_vf_exp_capabilities_t"><code class="docutils literal notranslate"><span class="pre">zesVFManagementGetVFCapabilitiesExp()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zesvfmanagementgetvfmemoryutilizationexp">zesVFManagementGetVFMemoryUtilizationExp</a><ul>
@@ -7481,42 +7645,15 @@ document.write(`
 <li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv440zesVFManagementGetVFEngineUtilizationExp15zes_vf_handle_tP8uint32_tP24zes_vf_util_engine_exp_t"><code class="docutils literal notranslate"><span class="pre">zesVFManagementGetVFEngineUtilizationExp()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zesvfmanagementsetvftelemetrymodeexp">zesVFManagementSetVFTelemetryModeExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv436zesVFManagementSetVFTelemetryModeExp15zes_vf_handle_t28zes_vf_info_util_exp_flags_t9ze_bool_t"><code class="docutils literal notranslate"><span class="pre">zesVFManagementSetVFTelemetryModeExp()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zesvfmanagementsetvftelemetrysamplingintervalexp">zesVFManagementSetVFTelemetrySamplingIntervalExp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv448zesVFManagementSetVFTelemetrySamplingIntervalExp15zes_vf_handle_t28zes_vf_info_util_exp_flags_t8uint64_t"><code class="docutils literal notranslate"><span class="pre">zesVFManagementSetVFTelemetrySamplingIntervalExp()</span></code></a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="sysman/api.html#virtualfunctionmanagement-enums">Virtualfunctionmanagement Enums</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zes-vf-management-exp-version-t">zes_vf_management_exp_version_t</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv431zes_vf_management_exp_version_t"><code class="docutils literal notranslate"><span class="pre">zes_vf_management_exp_version_t</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N31zes_vf_management_exp_version_t33ZES_VF_MANAGEMENT_EXP_VERSION_1_0E"><code class="docutils literal notranslate"><span class="pre">zes_vf_management_exp_version_t::ZES_VF_MANAGEMENT_EXP_VERSION_1_0</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N31zes_vf_management_exp_version_t33ZES_VF_MANAGEMENT_EXP_VERSION_1_1E"><code class="docutils literal notranslate"><span class="pre">zes_vf_management_exp_version_t::ZES_VF_MANAGEMENT_EXP_VERSION_1_1</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N31zes_vf_management_exp_version_t37ZES_VF_MANAGEMENT_EXP_VERSION_CURRENTE"><code class="docutils literal notranslate"><span class="pre">zes_vf_management_exp_version_t::ZES_VF_MANAGEMENT_EXP_VERSION_CURRENT</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N31zes_vf_management_exp_version_t42ZES_VF_MANAGEMENT_EXP_VERSION_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zes_vf_management_exp_version_t::ZES_VF_MANAGEMENT_EXP_VERSION_FORCE_UINT32</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zes-vf-info-mem-type-exp-flags-t">zes_vf_info_mem_type_exp_flags_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv431zes_vf_info_mem_type_exp_flag_t"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_mem_type_exp_flag_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N31zes_vf_info_mem_type_exp_flag_t45ZES_VF_INFO_MEM_TYPE_EXP_FLAG_MEM_TYPE_SYSTEME"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_mem_type_exp_flag_t::ZES_VF_INFO_MEM_TYPE_EXP_FLAG_MEM_TYPE_SYSTEM</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N31zes_vf_info_mem_type_exp_flag_t45ZES_VF_INFO_MEM_TYPE_EXP_FLAG_MEM_TYPE_DEVICEE"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_mem_type_exp_flag_t::ZES_VF_INFO_MEM_TYPE_EXP_FLAG_MEM_TYPE_DEVICE</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N31zes_vf_info_mem_type_exp_flag_t42ZES_VF_INFO_MEM_TYPE_EXP_FLAG_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_mem_type_exp_flag_t::ZES_VF_INFO_MEM_TYPE_EXP_FLAG_FORCE_UINT32</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zes-vf-info-util-exp-flags-t">zes_vf_info_util_exp_flags_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv427zes_vf_info_util_exp_flag_t"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_util_exp_flag_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N27zes_vf_info_util_exp_flag_t35ZES_VF_INFO_UTIL_EXP_FLAG_INFO_NONEE"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_util_exp_flag_t::ZES_VF_INFO_UTIL_EXP_FLAG_INFO_NONE</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N27zes_vf_info_util_exp_flag_t38ZES_VF_INFO_UTIL_EXP_FLAG_INFO_MEM_CPUE"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_util_exp_flag_t::ZES_VF_INFO_UTIL_EXP_FLAG_INFO_MEM_CPU</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N27zes_vf_info_util_exp_flag_t38ZES_VF_INFO_UTIL_EXP_FLAG_INFO_MEM_GPUE"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_util_exp_flag_t::ZES_VF_INFO_UTIL_EXP_FLAG_INFO_MEM_GPU</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N27zes_vf_info_util_exp_flag_t37ZES_VF_INFO_UTIL_EXP_FLAG_INFO_ENGINEE"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_util_exp_flag_t::ZES_VF_INFO_UTIL_EXP_FLAG_INFO_ENGINE</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N27zes_vf_info_util_exp_flag_t38ZES_VF_INFO_UTIL_EXP_FLAG_FORCE_UINT32E"><code class="docutils literal notranslate"><span class="pre">zes_vf_info_util_exp_flag_t::ZES_VF_INFO_UTIL_EXP_FLAG_FORCE_UINT32</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -7524,13 +7661,13 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="sysman/api.html#virtualfunctionmanagement-structures">Virtualfunctionmanagement Structures</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zes-vf-exp-properties-t">zes_vf_exp_properties_t</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv423zes_vf_exp_properties_t"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_properties_t</span></code></a><ul>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N23zes_vf_exp_properties_t5stypeE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_properties_t::stype</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N23zes_vf_exp_properties_t5pNextE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_properties_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N23zes_vf_exp_properties_t7addressE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_properties_t::address</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N23zes_vf_exp_properties_t4uuidE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_properties_t::uuid</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N23zes_vf_exp_properties_t5flagsE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_properties_t::flags</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sysman/api.html#zes-vf-exp-capabilities-t">zes_vf_exp_capabilities_t</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv425zes_vf_exp_capabilities_t"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_capabilities_t</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N25zes_vf_exp_capabilities_t5stypeE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_capabilities_t::stype</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N25zes_vf_exp_capabilities_t5pNextE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_capabilities_t::pNext</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N25zes_vf_exp_capabilities_t7addressE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_capabilities_t::address</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N25zes_vf_exp_capabilities_t15vfDeviceMemSizeE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_capabilities_t::vfDeviceMemSize</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N25zes_vf_exp_capabilities_t4vfIDE"><code class="docutils literal notranslate"><span class="pre">zes_vf_exp_capabilities_t::vfID</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -7539,10 +7676,8 @@ document.write(`
 <li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv421zes_vf_util_mem_exp_t"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_mem_exp_t</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N21zes_vf_util_mem_exp_t5stypeE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_mem_exp_t::stype</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N21zes_vf_util_mem_exp_t5pNextE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_mem_exp_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N21zes_vf_util_mem_exp_t12memTypeFlagsE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_mem_exp_t::memTypeFlags</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N21zes_vf_util_mem_exp_t4freeE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_mem_exp_t::free</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N21zes_vf_util_mem_exp_t4sizeE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_mem_exp_t::size</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N21zes_vf_util_mem_exp_t9timestampE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_mem_exp_t::timestamp</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N21zes_vf_util_mem_exp_t13vfMemLocationE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_mem_exp_t::vfMemLocation</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N21zes_vf_util_mem_exp_t13vfMemUtilizedE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_mem_exp_t::vfMemUtilized</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -7551,10 +7686,9 @@ document.write(`
 <li class="toctree-l5"><a class="reference internal" href="sysman/api.html#_CPPv424zes_vf_util_engine_exp_t"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_engine_exp_t</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N24zes_vf_util_engine_exp_t5stypeE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_engine_exp_t::stype</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N24zes_vf_util_engine_exp_t5pNextE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_engine_exp_t::pNext</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N24zes_vf_util_engine_exp_t4typeE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_engine_exp_t::type</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N24zes_vf_util_engine_exp_t12vfEngineTypeE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_engine_exp_t::vfEngineType</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N24zes_vf_util_engine_exp_t18activeCounterValueE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_engine_exp_t::activeCounterValue</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N24zes_vf_util_engine_exp_t20samplingCounterValueE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_engine_exp_t::samplingCounterValue</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="sysman/api.html#_CPPv4N24zes_vf_util_engine_exp_t9timestampE"><code class="docutils literal notranslate"><span class="pre">zes_vf_util_engine_exp_t::timestamp</span></code></a></li>
 </ul>
 </li>
 </ul>

@@ -27,12 +27,16 @@ API
     * :ref:`ze-mutable-group-size-exp-desc-t`
     * :ref:`ze-mutable-global-offset-exp-desc-t`
 
+    * :ref:`ze-mutable-graph-argument-exp-desc-t`
+
 * Functions
 
     * :ref:`zeCommandListGetNextCommandIdExp`
+    * :ref:`zeCommandListGetNextCommandIdWithKernelsExp`
     * :ref:`zeCommandListUpdateMutableCommandsExp`
     * :ref:`zeCommandListUpdateMutableCommandSignalEventExp`
     * :ref:`zeCommandListUpdateMutableCommandWaitEventsExp`
+    * :ref:`zeCommandListUpdateMutableCommandKernelsExp`
 
 
 ======================
@@ -100,7 +104,7 @@ API
 
     // Get next command identifier
     :ref:`ze-mutable-command-id-exp-desc-t` cmdIdDesc = {
-        :ref:`ZE_STRUCTURE_TYPE_MUTABLE_COMMAND_ID_EXP_DESC <ze-structure-type-t>`       // stype
+        :ref:`ZE_STRUCTURE_TYPE_MUTABLE_COMMAND_ID_EXP_DESC <ze-structure-type-t>`\,      // stype
         nullptr,                                            // pNext
         0                                                   // flags
     };
@@ -178,3 +182,106 @@ The application may subsequently mutate specific commands, as follows:
 
 
 Note, the command list must be explicitly closed after updating mutable commands and events. This informs the implementation that the application has finished with updates and is ready to submit the command list.
+In preparation for kernel mutation user must provide all possible kernels for the command.
+
+.. parsed-literal::
+
+    // define all possible kernels
+    ze_kernel_handle_t addKernel;
+    ze_kernel_handle_t mulKernel;
+
+    ze_kernel_handle_t kernels[] = {addKernel, mulKernel};
+
+    // when users want kernel mutation, they need to explicitly state this, as 0 does not include kernel instruction mutation by default
+    :ref:`ze-mutable-command-exp-flags-t` mutationFlags =
+        :ref:`ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_ARGUMENTS <ze-mutable-command-exp-flags-t>` |
+        :ref:`ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_COUNT <ze-mutable-command-exp-flags-t>` |
+        :ref:`ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_SIZE <ze-mutable-command-exp-flags-t>` |
+        :ref:`ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_INSTRUCTION <ze-mutable-command-exp-flags-t>`\;
+
+    // Get next command identifier
+    :ref:`ze-mutable-command-id-exp-desc-t` cmdIdDesc = {
+        :ref:`ZE_STRUCTURE_TYPE_MUTABLE_COMMAND_ID_EXP_DESC <ze-structure-type-t>`\,      // stype
+        nullptr,                                            // pNext
+        mutationFlags                                       // flags
+    };
+
+    // retrieve id for the append operation and provide all possible kernels for this command
+    uint64_t mutableKernelCommandId = 0;
+    :ref:`zeCommandListGetNextCommandIdWithKernelsExp`\(hCommandList, &cmdIdDesc, &mutableKernelCommandId, 2, kernels);
+
+    // Encode command into command list
+    :ref:`zeCommandListAppendLaunchKernel`\(hCommandList, addKernel, &groupSize, nullptr, 0, nullptr);
+
+    // Close the command list
+    :ref:`zeCommandListClose`\(hCommandList);
+
+Mutation of kernels must obey two rules:
+- kernel handle mutation function must be called as first for a given command id
+- kernel mutation invalidates all kernel arguments and dispatch parameters, these must be provided for the new kernel
+
+.. parsed-literal::
+
+    // Update mutable kernel for the command, switch from `addKernel` to `mulKernel`
+    :ref:`zeCommandListUpdateMutableCommandKernelsExp`\(hCommandList, 1, &mutableKernelCommandId, &mulKernel);
+
+    // modify group count
+    :ref:`ze-group-count-t` groupCount = {
+        32,                                                     // groupCountX
+        1,                                                      // groupCountY
+        1                                                       // groupCountZ
+    };
+
+    :ref:`ze-mutable-group-count-exp-desc-t` groupCountDesc = {
+        :ref:`ZE_STRUCTURE_TYPE_MUTABLE_GROUP_COUNT_EXP_DESC <ze-structure-type-t>`\,         // stype
+        nullptr,                                                // pNext
+        mutableKernelCommandId,                                 // commandId
+        &groupCount                                             // pGroupCount
+    };
+
+    :ref:`ze-mutable-group-size-exp-desc-t` groupSizeDesc = {
+        :ref:`ZE_STRUCTURE_TYPE_MUTABLE_GROUP_SIZE_EXP_DESC <ze-structure-type-t>`\,          // stype
+        &groupCountDesc,                                        // pNext
+        mutableKernelCommandId,                                 // commandId
+        32,                                                     // groupSizeX
+        1,                                                      // groupSizeY
+        1,                                                      // groupSizeZ
+    };
+
+    // Prepare to modify Kernel Argument
+    int argValue = 1;
+    void *usmPointer;
+
+    :ref:`ze-mutable-kernel-argument-exp-desc-t` krnlArgMemoryDesc = {
+        :ref:`ZE_STRUCTURE_TYPE_MUTABLE_KERNEL_ARGUMENT_EXP_DESC <ze-structure-type-t>`\,     // stype
+        &groupSizeDesc,                                         // pNext
+        mutableKernelCommandId,                                 // commandId
+        0,                                                      // argIndex
+        sizeof(void *),                                         // argSize
+        &usmPointer                                             // pArgValue
+    };
+
+    :ref:`ze-mutable-kernel-argument-exp-desc-t` krnlArgScalarDesc = {
+        :ref:`ZE_STRUCTURE_TYPE_MUTABLE_KERNEL_ARGUMENT_EXP_DESC <ze-structure-type-t>`\,     // stype
+        &krnlArgMemoryDesc,                                     // pNext
+        mutableKernelCommandId,                                 // commandId
+        1,                                                      // argIndex
+        sizeof(int),                                            // argSize
+        &argValue                                               // pArgValue
+    };
+
+    // Prepare to update mutable commands
+    :ref:`ze-mutable-commands-exp-desc-t` desc = {
+        :ref:`ZE_STRUCTURE_TYPE_MUTABLE_COMMANDS_EXP_DESC <ze-structure-type-t>`\,            // stype
+        &krnlArgScalarDesc,                                     // pNext
+        0                                                       // flags
+    };
+
+    // Update mutable kernel arguments and dispatch parameters for the command
+    :ref:`zeCommandListUpdateMutableCommandsExp`\(hCommandList, &desc);
+
+    // Close the command list
+    :ref:`zeCommandListClose`\(hCommandList);
+
+
+The command list must be explicitly closed after updating mutable commands.

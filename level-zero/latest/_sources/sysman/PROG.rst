@@ -23,6 +23,7 @@ Environment Variables
 The System Resource Management library may now be initialized without using environment variables by calling :ref:`zesInit`\.
 
 For compatibility, the following environment variables may also be enabled during initialization for the respective feature.
+It is recommended to initialize sysman either by calling :ref:`zesInit` or using the following environment variables but not both.
 
 +-----------------+-------------------------------------+------------+-----------------------------------------------------------------------------------+
 | Category        | Name                                | Values     | Description                                                                       |

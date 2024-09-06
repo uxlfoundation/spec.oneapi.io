@@ -141,8 +141,10 @@ List of Experimental Extensions
     - :ref:`"ZE_experimental_relaxed_allocation_limits" <ZE_experimental_relaxed_allocation_limits>`
     - :ref:`"ZE_experimental_sub_allocations" <ZE_experimental_sub_allocations>`
     - :ref:`"ZET_experimental_global_metric_timestamps" <ZET_experimental_global_metric_timestamps>`
+    - :ref:`"ZET_experimental_concurrent_metric_groups" <ZET_experimental_concurrent_metric_groups>`
     - :ref:`"ZET_experimental_metric_export_data" <ZET_experimental_metric_export_data>`
     - :ref:`"ZET_experimental_programmable_metrics" <ZET_experimental_programmable_metrics>`
+    - :ref:`"ZET_experimental_metric_tracer" <ZET_experimental_metric_tracer>`
     - :ref:`"ZET_experimental_calculate_multiple_metrics" <ZET_experimental_calculate_multiple_metrics>`
     - :ref:`"ZET_experimental_api_tracing" <ZET_experimental_api_tracing>`
     - :ref:`"ZES_experimental_firmware_security_version" <ZES_experimental_firmware_security_version>`

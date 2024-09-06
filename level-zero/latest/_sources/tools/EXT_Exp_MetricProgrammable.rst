@@ -31,7 +31,7 @@ API
     * :ref:`zetMetricProgrammableGetParamInfoExp`
     * :ref:`zetMetricProgrammableGetParamValueInfoExp`
     * :ref:`zetMetricCreateFromProgrammableExp`
-    * :ref:`zetMetricGroupCreateExp`
+    * :ref:`zetDeviceCreateMetricGroupsFromMetricsExp`
     * :ref:`zetMetricGroupAddMetricExp`
     * :ref:`zetMetricGroupRemoveMetricExp`
     * :ref:`zetMetricGroupCloseExp`
@@ -54,7 +54,6 @@ The following pseudo-code demonstrates how programmable metrics could be enumera
 
     zet_metric_handle_t * metricHandles = null_ptr;
     uint32_t metricHandleCount = 0;
-    zet_metric_group_handle_t metricGroup;
 
     // Query and Get metric programmable handles
     uint32_t programmableCount = 0;
@@ -87,19 +86,21 @@ The following pseudo-code demonstrates how programmable metrics could be enumera
             // Create Metric
             char metricName[ZET_MAX_METRIC_NAME] = "eu_active_minimum";
             char metricDescription[ZET_MAX_METRIC_DESCRIPTION] = "eu_active_minimum_desc";
-            :ref:`zetMetricCreateFromProgrammableExp`\(programmableHandle, &parameterValue, 1, metricName, metricDescription, &metricHandleCount, null_ptr);
+            :ref:`zetMetricCreateFromProgrammableExp`\(programmableHandle, &parameterValue, 1, metricName, metricDescription, &metricHandleCount, nullptr);
             zet_metric_handle_t * metricHandles = allocate(sizeof(zet_metric_handle_t) * metricHandleCount);
             :ref:`zetMetricCreateFromProgrammableExp`\(programmableHandle, &parameterValue, 1, metricName, metricDescription, &metricHandleCount, metricHandles);
         }
     }
 
     //Create Metric Group from metrics
-    zet_metric_group_handle_t metricGroupHandle{};
-    char metricGroupName[ZET_MAX_METRIC_GROUP_NAME] = "eu_active";
+    char metricGroupNamePrefix[ZET_MAX_METRIC_GROUP_NAME_PREFIX_EXP] = "eu_active";
     char metricGroupDescription[ZET_MAX_METRIC_GROUP_DESCRIPTION] = "eu_active_desc";
-    :ref:`zetMetricGroupCreateExp`\(device, metricGroupName, metricGroupDescription, ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_TIME_BASED, &metricGroup);
-    :ref:`zetMetricGroupAddMetricExp`\(metricGroup, &metricHandles[0], null_ptr, null_ptr);
-    :ref:`zetMetricGroupCloseExp`\(metricGroup);
+    uint32_t metricGroupCount = 0;
+    :ref:`zetDeviceCreateMetricGroupsFromMetricsExp`\(device, 1, &metricHandles[0], metricGroupNamePrefix, metricGroupDescription, &metricGroupCount, nullptr);
+    zet_metric_group_handle_t * metricGroupHandles = allocate(sizeof(zet_metric_group_handle_t) * metricGroupCount);
+    :ref:`zetDeviceCreateMetricGroupsFromMetricsExp`\(device, 1, &metricHandles[0], metricGroupNamePrefix, metricGroupDescription, &metricGroupCount, metricGroupHandles);
+    :ref:`zetMetricGroupAddMetricExp`\(metricGroupHandles[0], &metricHandles[1], nullptr, nullptr);
+    :ref:`zetMetricGroupCloseExp`\(metricGroupHandles[0]);
 
     //Activate Metric group
     //Collect Metric group using available sampling types

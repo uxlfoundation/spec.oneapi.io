@@ -358,7 +358,7 @@ document.write(`
 <li><p><a class="reference internal" href="api.html#zetmetricprogrammablegetparaminfoexp"><span class="std std-ref">zetMetricProgrammableGetParamInfoExp</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#zetmetricprogrammablegetparamvalueinfoexp"><span class="std std-ref">zetMetricProgrammableGetParamValueInfoExp</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#zetmetriccreatefromprogrammableexp"><span class="std std-ref">zetMetricCreateFromProgrammableExp</span></a></p></li>
-<li><p><a class="reference internal" href="api.html#zetmetricgroupcreateexp"><span class="std std-ref">zetMetricGroupCreateExp</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#zetdevicecreatemetricgroupsfrommetricsexp"><span class="std std-ref">zetDeviceCreateMetricGroupsFromMetricsExp</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#zetmetricgroupaddmetricexp"><span class="std std-ref">zetMetricGroupAddMetricExp</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#zetmetricgroupremovemetricexp"><span class="std std-ref">zetMetricGroupRemoveMetricExp</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#zetmetricgroupcloseexp"><span class="std std-ref">zetMetricGroupCloseExp</span></a></p></li>
@@ -380,7 +380,6 @@ This is made possible by making a list of programmable metrics available to the 
 <p>The following pseudo-code demonstrates how programmable metrics could be enumerated and custom values could be set to the metric parameters.</p>
 <pre class="literal-block">zet_metric_handle_t * metricHandles = null_ptr;
 uint32_t metricHandleCount = 0;
-zet_metric_group_handle_t metricGroup;
 
 // Query and Get metric programmable handles
 uint32_t programmableCount = 0;
@@ -413,19 +412,21 @@ for(uint32_t i = 0; i &lt; programmableCount; i++){
         // Create Metric
         char metricName[ZET_MAX_METRIC_NAME] = &quot;eu_active_minimum&quot;;
         char metricDescription[ZET_MAX_METRIC_DESCRIPTION] = &quot;eu_active_minimum_desc&quot;;
-        <a class="reference internal" href="api.html#zetmetriccreatefromprogrammableexp"><span class="std std-ref">zetMetricCreateFromProgrammableExp</span></a>(programmableHandle, &amp;parameterValue, 1, metricName, metricDescription, &amp;metricHandleCount, null_ptr);
+        <a class="reference internal" href="api.html#zetmetriccreatefromprogrammableexp"><span class="std std-ref">zetMetricCreateFromProgrammableExp</span></a>(programmableHandle, &amp;parameterValue, 1, metricName, metricDescription, &amp;metricHandleCount, nullptr);
         zet_metric_handle_t * metricHandles = allocate(sizeof(zet_metric_handle_t) * metricHandleCount);
         <a class="reference internal" href="api.html#zetmetriccreatefromprogrammableexp"><span class="std std-ref">zetMetricCreateFromProgrammableExp</span></a>(programmableHandle, &amp;parameterValue, 1, metricName, metricDescription, &amp;metricHandleCount, metricHandles);
     }
 }
 
 //Create Metric Group from metrics
-zet_metric_group_handle_t metricGroupHandle{};
-char metricGroupName[ZET_MAX_METRIC_GROUP_NAME] = &quot;eu_active&quot;;
+char metricGroupNamePrefix[ZET_MAX_METRIC_GROUP_NAME_PREFIX_EXP] = &quot;eu_active&quot;;
 char metricGroupDescription[ZET_MAX_METRIC_GROUP_DESCRIPTION] = &quot;eu_active_desc&quot;;
-<a class="reference internal" href="api.html#zetmetricgroupcreateexp"><span class="std std-ref">zetMetricGroupCreateExp</span></a>(device, metricGroupName, metricGroupDescription, ZET_METRIC_GROUP_SAMPLING_TYPE_FLAG_TIME_BASED, &amp;metricGroup);
-<a class="reference internal" href="api.html#zetmetricgroupaddmetricexp"><span class="std std-ref">zetMetricGroupAddMetricExp</span></a>(metricGroup, &amp;metricHandles[0], null_ptr, null_ptr);
-<a class="reference internal" href="api.html#zetmetricgroupcloseexp"><span class="std std-ref">zetMetricGroupCloseExp</span></a>(metricGroup);
+uint32_t metricGroupCount = 0;
+<a class="reference internal" href="api.html#zetdevicecreatemetricgroupsfrommetricsexp"><span class="std std-ref">zetDeviceCreateMetricGroupsFromMetricsExp</span></a>(device, 1, &amp;metricHandles[0], metricGroupNamePrefix, metricGroupDescription, &amp;metricGroupCount, nullptr);
+zet_metric_group_handle_t * metricGroupHandles = allocate(sizeof(zet_metric_group_handle_t) * metricGroupCount);
+<a class="reference internal" href="api.html#zetdevicecreatemetricgroupsfrommetricsexp"><span class="std std-ref">zetDeviceCreateMetricGroupsFromMetricsExp</span></a>(device, 1, &amp;metricHandles[0], metricGroupNamePrefix, metricGroupDescription, &amp;metricGroupCount, metricGroupHandles);
+<a class="reference internal" href="api.html#zetmetricgroupaddmetricexp"><span class="std std-ref">zetMetricGroupAddMetricExp</span></a>(metricGroupHandles[0], &amp;metricHandles[1], nullptr, nullptr);
+<a class="reference internal" href="api.html#zetmetricgroupcloseexp"><span class="std std-ref">zetMetricGroupCloseExp</span></a>(metricGroupHandles[0]);
 
 //Activate Metric group
 //Collect Metric group using available sampling types

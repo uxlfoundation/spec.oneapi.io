@@ -3,7 +3,7 @@
 ==============================
 Core API
 ==============================
-oneAPI Level Zero Specification - Version 1.9.3
+oneAPI Level Zero Specification - Version 1.10
 
  
 
@@ -156,6 +156,7 @@ Driver
 
     * :ref:`zeInit`
     * :ref:`zeDriverGet`
+    * :ref:`zeInitDrivers`
     * :ref:`zeDriverGetApiVersion`
     * :ref:`zeDriverGetProperties`
     * :ref:`zeDriverGetIpcProperties`
@@ -168,6 +169,7 @@ Driver
 
 
     * :ref:`ze-init-flags-t`
+    * :ref:`ze-init-driver-type-flags-t`
     * :ref:`ze-api-version-t`
     * :ref:`ze-ipc-property-flags-t`
 
@@ -175,6 +177,7 @@ Driver
 * Structures
 
 
+    * :ref:`ze-init-driver-type-desc-t`
     * :ref:`ze-driver-uuid-t`
     * :ref:`ze-driver-properties-t`
     * :ref:`ze-driver-ipc-properties-t`
@@ -200,6 +203,15 @@ zeDriverGet
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. doxygenfunction:: zeDriverGet
+    :project: LevelZero
+
+
+.. _zeInitDrivers:
+
+zeInitDrivers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zeInitDrivers
     :project: LevelZero
 
 
@@ -271,6 +283,15 @@ ze_init_flags_t
     :project: LevelZero
 
 
+.. _ze-init-driver-type-flags-t:
+
+ze_init_driver_type_flags_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenenum:: ze_init_driver_type_flag_t
+    :project: LevelZero
+
+
 .. _ze-api-version-t:
 
 ze_api_version_t
@@ -291,6 +312,16 @@ ze_ipc_property_flags_t
  
 Driver Structures
 ------------------------------------------------------------------------------
+
+.. _ze-init-driver-type-desc-t:
+
+ze_init_driver_type_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_init_driver_type_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
 
 .. _ze-driver-uuid-t:
 
@@ -3211,6 +3242,227 @@ ze_global_offset_exp_version_t
 
  
 
+Mutablecommandlist
+============================================================
+* Functions
+
+
+    * :ref:`zeCommandListGetNextCommandIdExp`
+    * :ref:`zeCommandListGetNextCommandIdWithKernelsExp`
+    * :ref:`zeCommandListUpdateMutableCommandsExp`
+    * :ref:`zeCommandListUpdateMutableCommandSignalEventExp`
+    * :ref:`zeCommandListUpdateMutableCommandWaitEventsExp`
+    * :ref:`zeCommandListUpdateMutableCommandKernelsExp`
+
+ 
+* Enumerations
+
+
+    * :ref:`ze-mutable-command-list-exp-version-t`
+    * :ref:`ze-mutable-command-exp-flags-t`
+    * :ref:`ze-mutable-command-list-exp-flags-t`
+
+ 
+* Structures
+
+
+    * :ref:`ze-mutable-command-id-exp-desc-t`
+    * :ref:`ze-mutable-command-list-exp-properties-t`
+    * :ref:`ze-mutable-command-list-exp-desc-t`
+    * :ref:`ze-mutable-commands-exp-desc-t`
+    * :ref:`ze-mutable-kernel-argument-exp-desc-t`
+    * :ref:`ze-mutable-group-count-exp-desc-t`
+    * :ref:`ze-mutable-group-size-exp-desc-t`
+    * :ref:`ze-mutable-global-offset-exp-desc-t`
+    * :ref:`ze-mutable-graph-argument-exp-desc-t`
+
+
+Mutablecommandlist Functions
+------------------------------------------------------------------------------
+
+
+.. _zeCommandListGetNextCommandIdExp:
+
+zeCommandListGetNextCommandIdExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zeCommandListGetNextCommandIdExp
+    :project: LevelZero
+
+
+.. _zeCommandListGetNextCommandIdWithKernelsExp:
+
+zeCommandListGetNextCommandIdWithKernelsExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zeCommandListGetNextCommandIdWithKernelsExp
+    :project: LevelZero
+
+
+.. _zeCommandListUpdateMutableCommandsExp:
+
+zeCommandListUpdateMutableCommandsExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zeCommandListUpdateMutableCommandsExp
+    :project: LevelZero
+
+
+.. _zeCommandListUpdateMutableCommandSignalEventExp:
+
+zeCommandListUpdateMutableCommandSignalEventExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zeCommandListUpdateMutableCommandSignalEventExp
+    :project: LevelZero
+
+
+.. _zeCommandListUpdateMutableCommandWaitEventsExp:
+
+zeCommandListUpdateMutableCommandWaitEventsExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zeCommandListUpdateMutableCommandWaitEventsExp
+    :project: LevelZero
+
+
+.. _zeCommandListUpdateMutableCommandKernelsExp:
+
+zeCommandListUpdateMutableCommandKernelsExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zeCommandListUpdateMutableCommandKernelsExp
+    :project: LevelZero
+
+
+
+Mutablecommandlist Enums
+------------------------------------------------------------------------------
+
+
+.. _ze-mutable-command-list-exp-version-t:
+
+ze_mutable_command_list_exp_version_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenenum:: ze_mutable_command_list_exp_version_t
+    :project: LevelZero
+
+
+.. _ze-mutable-command-exp-flags-t:
+
+ze_mutable_command_exp_flags_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenenum:: ze_mutable_command_exp_flag_t
+    :project: LevelZero
+
+
+.. _ze-mutable-command-list-exp-flags-t:
+
+ze_mutable_command_list_exp_flags_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenenum:: ze_mutable_command_list_exp_flag_t
+    :project: LevelZero
+
+ 
+Mutablecommandlist Structures
+------------------------------------------------------------------------------
+
+.. _ze-mutable-command-id-exp-desc-t:
+
+ze_mutable_command_id_exp_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_mutable_command_id_exp_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _ze-mutable-command-list-exp-properties-t:
+
+ze_mutable_command_list_exp_properties_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_mutable_command_list_exp_properties_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _ze-mutable-command-list-exp-desc-t:
+
+ze_mutable_command_list_exp_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_mutable_command_list_exp_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _ze-mutable-commands-exp-desc-t:
+
+ze_mutable_commands_exp_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_mutable_commands_exp_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _ze-mutable-kernel-argument-exp-desc-t:
+
+ze_mutable_kernel_argument_exp_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_mutable_kernel_argument_exp_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _ze-mutable-group-count-exp-desc-t:
+
+ze_mutable_group_count_exp_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_mutable_group_count_exp_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _ze-mutable-group-size-exp-desc-t:
+
+ze_mutable_group_size_exp_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_mutable_group_size_exp_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _ze-mutable-global-offset-exp-desc-t:
+
+ze_mutable_global_offset_exp_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_mutable_global_offset_exp_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _ze-mutable-graph-argument-exp-desc-t:
+
+ze_mutable_graph_argument_exp_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: ze_mutable_graph_argument_exp_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+
+ 
+
  
 
 Relaxedalloclimits
@@ -5598,194 +5850,4 @@ ze_immediate_command_list_append_exp_version_t
     :project: LevelZero
 
  
-
- 
-
-Mutablecommandlist
-============================================================
-* Functions
-
-
-    * :ref:`zeCommandListGetNextCommandIdExp`
-    * :ref:`zeCommandListUpdateMutableCommandsExp`
-    * :ref:`zeCommandListUpdateMutableCommandSignalEventExp`
-    * :ref:`zeCommandListUpdateMutableCommandWaitEventsExp`
-
- 
-* Enumerations
-
-
-    * :ref:`ze-mutable-command-list-exp-version-t`
-    * :ref:`ze-mutable-command-exp-flags-t`
-    * :ref:`ze-mutable-command-list-exp-flags-t`
-
- 
-* Structures
-
-
-    * :ref:`ze-mutable-command-id-exp-desc-t`
-    * :ref:`ze-mutable-command-list-exp-properties-t`
-    * :ref:`ze-mutable-command-list-exp-desc-t`
-    * :ref:`ze-mutable-commands-exp-desc-t`
-    * :ref:`ze-mutable-kernel-argument-exp-desc-t`
-    * :ref:`ze-mutable-group-count-exp-desc-t`
-    * :ref:`ze-mutable-group-size-exp-desc-t`
-    * :ref:`ze-mutable-global-offset-exp-desc-t`
-
-
-Mutablecommandlist Functions
-------------------------------------------------------------------------------
-
-
-.. _zeCommandListGetNextCommandIdExp:
-
-zeCommandListGetNextCommandIdExp
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenfunction:: zeCommandListGetNextCommandIdExp
-    :project: LevelZero
-
-
-.. _zeCommandListUpdateMutableCommandsExp:
-
-zeCommandListUpdateMutableCommandsExp
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenfunction:: zeCommandListUpdateMutableCommandsExp
-    :project: LevelZero
-
-
-.. _zeCommandListUpdateMutableCommandSignalEventExp:
-
-zeCommandListUpdateMutableCommandSignalEventExp
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenfunction:: zeCommandListUpdateMutableCommandSignalEventExp
-    :project: LevelZero
-
-
-.. _zeCommandListUpdateMutableCommandWaitEventsExp:
-
-zeCommandListUpdateMutableCommandWaitEventsExp
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenfunction:: zeCommandListUpdateMutableCommandWaitEventsExp
-    :project: LevelZero
-
-
-
-Mutablecommandlist Enums
-------------------------------------------------------------------------------
-
-
-.. _ze-mutable-command-list-exp-version-t:
-
-ze_mutable_command_list_exp_version_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenenum:: ze_mutable_command_list_exp_version_t
-    :project: LevelZero
-
-
-.. _ze-mutable-command-exp-flags-t:
-
-ze_mutable_command_exp_flags_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenenum:: ze_mutable_command_exp_flag_t
-    :project: LevelZero
-
-
-.. _ze-mutable-command-list-exp-flags-t:
-
-ze_mutable_command_list_exp_flags_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenenum:: ze_mutable_command_list_exp_flag_t
-    :project: LevelZero
-
- 
-Mutablecommandlist Structures
-------------------------------------------------------------------------------
-
-.. _ze-mutable-command-id-exp-desc-t:
-
-ze_mutable_command_id_exp_desc_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenstruct:: ze_mutable_command_id_exp_desc_t
-    :project: LevelZero
-    :members:
-    :undoc-members:
-
-.. _ze-mutable-command-list-exp-properties-t:
-
-ze_mutable_command_list_exp_properties_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenstruct:: ze_mutable_command_list_exp_properties_t
-    :project: LevelZero
-    :members:
-    :undoc-members:
-
-.. _ze-mutable-command-list-exp-desc-t:
-
-ze_mutable_command_list_exp_desc_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenstruct:: ze_mutable_command_list_exp_desc_t
-    :project: LevelZero
-    :members:
-    :undoc-members:
-
-.. _ze-mutable-commands-exp-desc-t:
-
-ze_mutable_commands_exp_desc_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenstruct:: ze_mutable_commands_exp_desc_t
-    :project: LevelZero
-    :members:
-    :undoc-members:
-
-.. _ze-mutable-kernel-argument-exp-desc-t:
-
-ze_mutable_kernel_argument_exp_desc_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenstruct:: ze_mutable_kernel_argument_exp_desc_t
-    :project: LevelZero
-    :members:
-    :undoc-members:
-
-.. _ze-mutable-group-count-exp-desc-t:
-
-ze_mutable_group_count_exp_desc_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenstruct:: ze_mutable_group_count_exp_desc_t
-    :project: LevelZero
-    :members:
-    :undoc-members:
-
-.. _ze-mutable-group-size-exp-desc-t:
-
-ze_mutable_group_size_exp_desc_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenstruct:: ze_mutable_group_size_exp_desc_t
-    :project: LevelZero
-    :members:
-    :undoc-members:
-
-.. _ze-mutable-global-offset-exp-desc-t:
-
-ze_mutable_global_offset_exp_desc_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenstruct:: ze_mutable_global_offset_exp_desc_t
-    :project: LevelZero
-    :members:
-    :undoc-members:
-
 

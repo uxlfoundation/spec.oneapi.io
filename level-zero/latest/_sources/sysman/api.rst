@@ -3,7 +3,7 @@
 ==============================
 Sysman API
 ==============================
-oneAPI Level Zero Specification - Version 1.9.3
+oneAPI Level Zero Specification - Version 1.10
 
  
 
@@ -3717,26 +3717,22 @@ Virtualfunctionmanagement
 * Functions
 
 
-    * :ref:`zesDeviceEnumActiveVFExp`
-    * :ref:`zesVFManagementGetVFPropertiesExp`
+    * :ref:`zesDeviceEnumEnabledVFExp`
+    * :ref:`zesVFManagementGetVFCapabilitiesExp`
     * :ref:`zesVFManagementGetVFMemoryUtilizationExp`
     * :ref:`zesVFManagementGetVFEngineUtilizationExp`
-    * :ref:`zesVFManagementSetVFTelemetryModeExp`
-    * :ref:`zesVFManagementSetVFTelemetrySamplingIntervalExp`
 
  
 * Enumerations
 
 
     * :ref:`zes-vf-management-exp-version-t`
-    * :ref:`zes-vf-info-mem-type-exp-flags-t`
-    * :ref:`zes-vf-info-util-exp-flags-t`
 
  
 * Structures
 
 
-    * :ref:`zes-vf-exp-properties-t`
+    * :ref:`zes-vf-exp-capabilities-t`
     * :ref:`zes-vf-util-mem-exp-t`
     * :ref:`zes-vf-util-engine-exp-t`
 
@@ -3745,21 +3741,21 @@ Virtualfunctionmanagement Functions
 ------------------------------------------------------------------------------
 
 
-.. _zesDeviceEnumActiveVFExp:
+.. _zesDeviceEnumEnabledVFExp:
 
-zesDeviceEnumActiveVFExp
+zesDeviceEnumEnabledVFExp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. doxygenfunction:: zesDeviceEnumActiveVFExp
+.. doxygenfunction:: zesDeviceEnumEnabledVFExp
     :project: LevelZero
 
 
-.. _zesVFManagementGetVFPropertiesExp:
+.. _zesVFManagementGetVFCapabilitiesExp:
 
-zesVFManagementGetVFPropertiesExp
+zesVFManagementGetVFCapabilitiesExp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. doxygenfunction:: zesVFManagementGetVFPropertiesExp
+.. doxygenfunction:: zesVFManagementGetVFCapabilitiesExp
     :project: LevelZero
 
 
@@ -3781,24 +3777,6 @@ zesVFManagementGetVFEngineUtilizationExp
     :project: LevelZero
 
 
-.. _zesVFManagementSetVFTelemetryModeExp:
-
-zesVFManagementSetVFTelemetryModeExp
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenfunction:: zesVFManagementSetVFTelemetryModeExp
-    :project: LevelZero
-
-
-.. _zesVFManagementSetVFTelemetrySamplingIntervalExp:
-
-zesVFManagementSetVFTelemetrySamplingIntervalExp
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenfunction:: zesVFManagementSetVFTelemetrySamplingIntervalExp
-    :project: LevelZero
-
-
 
 Virtualfunctionmanagement Enums
 ------------------------------------------------------------------------------
@@ -3812,34 +3790,16 @@ zes_vf_management_exp_version_t
 .. doxygenenum:: zes_vf_management_exp_version_t
     :project: LevelZero
 
-
-.. _zes-vf-info-mem-type-exp-flags-t:
-
-zes_vf_info_mem_type_exp_flags_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenenum:: zes_vf_info_mem_type_exp_flag_t
-    :project: LevelZero
-
-
-.. _zes-vf-info-util-exp-flags-t:
-
-zes_vf_info_util_exp_flags_t
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. doxygenenum:: zes_vf_info_util_exp_flag_t
-    :project: LevelZero
-
  
 Virtualfunctionmanagement Structures
 ------------------------------------------------------------------------------
 
-.. _zes-vf-exp-properties-t:
+.. _zes-vf-exp-capabilities-t:
 
-zes_vf_exp_properties_t
+zes_vf_exp_capabilities_t
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. doxygenstruct:: zes_vf_exp_properties_t
+.. doxygenstruct:: zes_vf_exp_capabilities_t
     :project: LevelZero
     :members:
     :undoc-members:

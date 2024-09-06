@@ -350,6 +350,7 @@ document.write(`
 <li><p><a class="reference internal" href="api.html#ze-mutable-group-count-exp-desc-t"><span class="std std-ref">ze_mutable_group_count_exp_desc_t</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#ze-mutable-group-size-exp-desc-t"><span class="std std-ref">ze_mutable_group_size_exp_desc_t</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#ze-mutable-global-offset-exp-desc-t"><span class="std std-ref">ze_mutable_global_offset_exp_desc_t</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#ze-mutable-graph-argument-exp-desc-t"><span class="std std-ref">ze_mutable_graph_argument_exp_desc_t</span></a></p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -357,9 +358,11 @@ document.write(`
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="api.html#zecommandlistgetnextcommandidexp"><span class="std std-ref">zeCommandListGetNextCommandIdExp</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#zecommandlistgetnextcommandidwithkernelsexp"><span class="std std-ref">zeCommandListGetNextCommandIdWithKernelsExp</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#zecommandlistupdatemutablecommandsexp"><span class="std std-ref">zeCommandListUpdateMutableCommandsExp</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#zecommandlistupdatemutablecommandsignaleventexp"><span class="std std-ref">zeCommandListUpdateMutableCommandSignalEventExp</span></a></p></li>
 <li><p><a class="reference internal" href="api.html#zecommandlistupdatemutablecommandwaiteventsexp"><span class="std std-ref">zeCommandListUpdateMutableCommandWaitEventsExp</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#zecommandlistupdatemutablecommandkernelsexp"><span class="std std-ref">zeCommandListUpdateMutableCommandKernelsExp</span></a></p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -428,7 +431,7 @@ int defaultValue = 0;
 
 // Get next command identifier
 <a class="reference internal" href="api.html#ze-mutable-command-id-exp-desc-t"><span class="std std-ref">ze_mutable_command_id_exp_desc_t</span></a> cmdIdDesc = {
-    <a class="reference internal" href="api.html#ze-structure-type-t"><span class="std std-ref">ZE_STRUCTURE_TYPE_MUTABLE_COMMAND_ID_EXP_DESC</span></a>       // stype
+    <a class="reference internal" href="api.html#ze-structure-type-t"><span class="std std-ref">ZE_STRUCTURE_TYPE_MUTABLE_COMMAND_ID_EXP_DESC</span></a>,      // stype
     nullptr,                                            // pNext
     0                                                   // flags
 };
@@ -498,7 +501,101 @@ int argValue = 1;
 <a class="reference internal" href="api.html#zecommandlistclose"><span class="std std-ref">zeCommandListClose</span></a>(hCommandList);
 
 // ...</pre>
-<p>Note, the command list must be explicitly closed after updating mutable commands and events. This informs the implementation that the application has finished with updates and is ready to submit the command list.</p>
+<p>Note, the command list must be explicitly closed after updating mutable commands and events. This informs the implementation that the application has finished with updates and is ready to submit the command list.
+In preparation for kernel mutation user must provide all possible kernels for the command.</p>
+<pre class="literal-block">// define all possible kernels
+ze_kernel_handle_t addKernel;
+ze_kernel_handle_t mulKernel;
+
+ze_kernel_handle_t kernels[] = {addKernel, mulKernel};
+
+// when users want kernel mutation, they need to explicitly state this, as 0 does not include kernel instruction mutation by default
+<a class="reference internal" href="api.html#ze-mutable-command-exp-flags-t"><span class="std std-ref">ze_mutable_command_exp_flags_t</span></a> mutationFlags =
+    <a class="reference internal" href="api.html#ze-mutable-command-exp-flags-t"><span class="std std-ref">ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_ARGUMENTS</span></a> |
+    <a class="reference internal" href="api.html#ze-mutable-command-exp-flags-t"><span class="std std-ref">ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_COUNT</span></a> |
+    <a class="reference internal" href="api.html#ze-mutable-command-exp-flags-t"><span class="std std-ref">ZE_MUTABLE_COMMAND_EXP_FLAG_GROUP_SIZE</span></a> |
+    <a class="reference internal" href="api.html#ze-mutable-command-exp-flags-t"><span class="std std-ref">ZE_MUTABLE_COMMAND_EXP_FLAG_KERNEL_INSTRUCTION</span></a>;
+
+// Get next command identifier
+<a class="reference internal" href="api.html#ze-mutable-command-id-exp-desc-t"><span class="std std-ref">ze_mutable_command_id_exp_desc_t</span></a> cmdIdDesc = {
+    <a class="reference internal" href="api.html#ze-structure-type-t"><span class="std std-ref">ZE_STRUCTURE_TYPE_MUTABLE_COMMAND_ID_EXP_DESC</span></a>,      // stype
+    nullptr,                                            // pNext
+    mutationFlags                                       // flags
+};
+
+// retrieve id for the append operation and provide all possible kernels for this command
+uint64_t mutableKernelCommandId = 0;
+<a class="reference internal" href="api.html#zecommandlistgetnextcommandidwithkernelsexp"><span class="std std-ref">zeCommandListGetNextCommandIdWithKernelsExp</span></a>(hCommandList, &amp;cmdIdDesc, &amp;mutableKernelCommandId, 2, kernels);
+
+// Encode command into command list
+<a class="reference internal" href="api.html#zecommandlistappendlaunchkernel"><span class="std std-ref">zeCommandListAppendLaunchKernel</span></a>(hCommandList, addKernel, &amp;groupSize, nullptr, 0, nullptr);
+
+// Close the command list
+<a class="reference internal" href="api.html#zecommandlistclose"><span class="std std-ref">zeCommandListClose</span></a>(hCommandList);</pre>
+<p>Mutation of kernels must obey two rules:
+- kernel handle mutation function must be called as first for a given command id
+- kernel mutation invalidates all kernel arguments and dispatch parameters, these must be provided for the new kernel</p>
+<pre class="literal-block">// Update mutable kernel for the command, switch from <cite>addKernel</cite> to <cite>mulKernel</cite>
+<a class="reference internal" href="api.html#zecommandlistupdatemutablecommandkernelsexp"><span class="std std-ref">zeCommandListUpdateMutableCommandKernelsExp</span></a>(hCommandList, 1, &amp;mutableKernelCommandId, &amp;mulKernel);
+
+// modify group count
+<a class="reference internal" href="api.html#ze-group-count-t"><span class="std std-ref">ze_group_count_t</span></a> groupCount = {
+    32,                                                     // groupCountX
+    1,                                                      // groupCountY
+    1                                                       // groupCountZ
+};
+
+<a class="reference internal" href="api.html#ze-mutable-group-count-exp-desc-t"><span class="std std-ref">ze_mutable_group_count_exp_desc_t</span></a> groupCountDesc = {
+    <a class="reference internal" href="api.html#ze-structure-type-t"><span class="std std-ref">ZE_STRUCTURE_TYPE_MUTABLE_GROUP_COUNT_EXP_DESC</span></a>,         // stype
+    nullptr,                                                // pNext
+    mutableKernelCommandId,                                 // commandId
+    &amp;groupCount                                             // pGroupCount
+};
+
+<a class="reference internal" href="api.html#ze-mutable-group-size-exp-desc-t"><span class="std std-ref">ze_mutable_group_size_exp_desc_t</span></a> groupSizeDesc = {
+    <a class="reference internal" href="api.html#ze-structure-type-t"><span class="std std-ref">ZE_STRUCTURE_TYPE_MUTABLE_GROUP_SIZE_EXP_DESC</span></a>,          // stype
+    &amp;groupCountDesc,                                        // pNext
+    mutableKernelCommandId,                                 // commandId
+    32,                                                     // groupSizeX
+    1,                                                      // groupSizeY
+    1,                                                      // groupSizeZ
+};
+
+// Prepare to modify Kernel Argument
+int argValue = 1;
+void <a href="#id1"><span class="problematic" id="id2">*</span></a>usmPointer;
+
+<a class="reference internal" href="api.html#ze-mutable-kernel-argument-exp-desc-t"><span class="std std-ref">ze_mutable_kernel_argument_exp_desc_t</span></a> krnlArgMemoryDesc = {
+    <a class="reference internal" href="api.html#ze-structure-type-t"><span class="std std-ref">ZE_STRUCTURE_TYPE_MUTABLE_KERNEL_ARGUMENT_EXP_DESC</span></a>,     // stype
+    &amp;groupSizeDesc,                                         // pNext
+    mutableKernelCommandId,                                 // commandId
+    0,                                                      // argIndex
+    sizeof(void <a href="#id3"><span class="problematic" id="id4">*</span></a>),                                         // argSize
+    &amp;usmPointer                                             // pArgValue
+};
+
+<a class="reference internal" href="api.html#ze-mutable-kernel-argument-exp-desc-t"><span class="std std-ref">ze_mutable_kernel_argument_exp_desc_t</span></a> krnlArgScalarDesc = {
+    <a class="reference internal" href="api.html#ze-structure-type-t"><span class="std std-ref">ZE_STRUCTURE_TYPE_MUTABLE_KERNEL_ARGUMENT_EXP_DESC</span></a>,     // stype
+    &amp;krnlArgMemoryDesc,                                     // pNext
+    mutableKernelCommandId,                                 // commandId
+    1,                                                      // argIndex
+    sizeof(int),                                            // argSize
+    &amp;argValue                                               // pArgValue
+};
+
+// Prepare to update mutable commands
+<a class="reference internal" href="api.html#ze-mutable-commands-exp-desc-t"><span class="std std-ref">ze_mutable_commands_exp_desc_t</span></a> desc = {
+    <a class="reference internal" href="api.html#ze-structure-type-t"><span class="std std-ref">ZE_STRUCTURE_TYPE_MUTABLE_COMMANDS_EXP_DESC</span></a>,            // stype
+    &amp;krnlArgScalarDesc,                                     // pNext
+    0                                                       // flags
+};
+
+// Update mutable kernel arguments and dispatch parameters for the command
+<a class="reference internal" href="api.html#zecommandlistupdatemutablecommandsexp"><span class="std std-ref">zeCommandListUpdateMutableCommandsExp</span></a>(hCommandList, &amp;desc);
+
+// Close the command list
+<a class="reference internal" href="api.html#zecommandlistclose"><span class="std std-ref">zeCommandListClose</span></a>(hCommandList);</pre>
+<p>The command list must be explicitly closed after updating mutable commands.</p>
 </section>
 
 

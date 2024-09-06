@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Virtual Function Management Extension &#8212; Level Zero Specification  documentation</title>
+    <title>Concurrent Metric Groups Experimental Extension &#8212; Level Zero Specification  documentation</title>
   
   
   
@@ -41,7 +41,7 @@
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'sysman/EXT_Exp_VirtualFunctionManagement';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tools/EXT_Exp_ConcurrentMetricGroup';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -149,14 +149,14 @@
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../core/INTRO.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../core/PROG.html">Core Programming Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/PROG.html">Tools Programming Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PROG.html">Sysman Programming Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PROG.html">Tools Programming Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sysman/PROG.html">Sysman Programming Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../core/SPIRV.html">SPIR-V Programming Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../core/EXT.html">Extensions</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../core/api.html">Core API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tools/api.html">Tools API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html">Sysman API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">Tools API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sysman/api.html">Sysman API</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
@@ -214,7 +214,7 @@
       
       
       
-      <li><a href="../_sources/sysman/EXT_Exp_VirtualFunctionManagement.rst" target="_blank"
+      <li><a href="../_sources/tools/EXT_Exp_ConcurrentMetricGroup.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +298,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Virtual Function Management Extension</h1>
+    <h1>Concurrent Metric Groups Experimental Extension</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -309,9 +309,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-function-management">Virtual Function Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrent-metric-groups">Concurrent Metric Groups</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-code">Sample Code</a></li>
 </ul>
             </nav>
         </div>
@@ -323,74 +324,58 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="virtual-function-management-extension">
-<span id="zes-experimental-virtual-function-management"></span><h1>Virtual Function Management Extension<a class="headerlink" href="#virtual-function-management-extension" title="Link to this heading">#</a></h1>
+  <section id="concurrent-metric-groups-experimental-extension">
+<span id="zet-experimental-concurrent-metric-groups"></span><h1>Concurrent Metric Groups Experimental Extension<a class="headerlink" href="#concurrent-metric-groups-experimental-extension" title="Link to this heading">#</a></h1>
 <section id="api">
 <h2>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Functions</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference internal" href="api.html#zesdeviceenumenabledvfexp"><span class="std std-ref">zesDeviceEnumEnabledVFExp</span></a></p></li>
-<li><p><a class="reference internal" href="api.html#zesvfmanagementgetvfcapabilitiesexp"><span class="std std-ref">zesVFManagementGetVFCapabilitiesExp</span></a></p></li>
-<li><p><a class="reference internal" href="api.html#zesvfmanagementgetvfmemoryutilizationexp"><span class="std std-ref">zesVFManagementGetVFMemoryUtilizationExp</span></a></p></li>
-<li><p><a class="reference internal" href="api.html#zesvfmanagementgetvfengineutilizationexp"><span class="std std-ref">zesVFManagementGetVFEngineUtilizationExp</span></a></p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Enumerations</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><a class="reference internal" href="api.html#zes-vf-management-exp-version-t"><span class="std std-ref">zes_vf_management_exp_version_t</span></a></p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Structures</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><a class="reference internal" href="api.html#zes-vf-exp-capabilities-t"><span class="std std-ref">zes_vf_exp_capabilities_t</span></a></p></li>
-<li><p><a class="reference internal" href="api.html#zes-vf-util-mem-exp-t"><span class="std std-ref">zes_vf_util_mem_exp_t</span></a></p></li>
-<li><p><a class="reference internal" href="api.html#zes-vf-util-engine-exp-t"><span class="std std-ref">zes_vf_util_engine_exp_t</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#zetdevicegetconcurrentmetricgroupsexp"><span class="std std-ref">zetDeviceGetConcurrentMetricGroupsExp</span></a></p></li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
-<section id="virtual-function-management">
-<h3>Virtual Function Management<a class="headerlink" href="#virtual-function-management" title="Link to this heading">#</a></h3>
-<p>This feature adds the ability to retrieve telemetry from PF domain for monitoring per VF memory and engine utilization.
-This telemetry is used to determine if a VM has oversubscribed GPU memory or observe engine business for a targeted workload.
-If VF has no activity value to report, then implementation shall reflect that appropriately in <a class="reference internal" href="api.html#zes-vf-util-engine-exp-t"><span class="std std-ref">zes_vf_util_engine_exp_t</span></a> struct so that percentage
-calculation results in value of 0.</p>
-<p>The following pseudo-code demonstrates a sequence for obtaining the engine activity for all Virtual Functions from Physical Function environment:</p>
-<pre class="literal-block">// Gather count of VF handles
-uint32_t numVf = 0;
-<a class="reference internal" href="api.html#zes-vf-exp-capabilities-t"><span class="std std-ref">zes_vf_exp_capabilities_t</span></a> vfProps {};
-<a class="reference internal" href="api.html#zesdeviceenumenabledvfexp"><span class="std std-ref">zesDeviceEnumEnabledVFExp</span></a>(hDevice, &amp;numVf, nullptr);
-
-// Allocate memory for vf handles and call back in to gather handles
-std::vector&lt;zes_vf_handle_t&gt; vfs(numVf, nullptr);
-<a class="reference internal" href="api.html#zesdeviceenumenabledvfexp"><span class="std std-ref">zesDeviceEnumEnabledVFExp</span></a>(hDevice, &amp;numVf, vfs.data());
-
-// Gather VF properties
-std::vector &lt;<a class="reference internal" href="api.html#zes-vf-exp-capabilities-t"><span class="std std-ref">zes_vf_exp_capabilities_t</span></a>&gt; vfProps(numVf);
-for (uint32_t i = 0; i &lt; numVf; i++) {
-    <a class="reference internal" href="api.html#zesvfmanagementgetvfcapabilitiesexp"><span class="std std-ref">zesVFManagementGetVFCapabilitiesExp</span></a>(vfs[i], &amp;vfProps[i]);
-}
-
-// Detect the info types a particular VF supports
-
-// Using VF# 0 to demonstrate how to detect engine info type and query engine util info
-zes_vf_handle_t activeVf = vfs[0];
-uint32_t engineStatCount = 0;
-
-<a class="reference internal" href="api.html#zesvfmanagementgetvfengineutilizationexp"><span class="std std-ref">zesVFManagementGetVFEngineUtilizationExp</span></a>(activeVf, &amp;engineStatCount, nullptr);
-// Allocate memory for vf engine stats
-<a class="reference internal" href="api.html#zes-vf-util-engine-exp-t"><span class="std std-ref">zes_vf_util_engine_exp_t</span></a>* engineStats0 = (<a class="reference internal" href="api.html#zes-vf-util-engine-exp-t"><span class="std std-ref">zes_vf_util_engine_exp_t</span></a>*) allocate(engineStatCount * sizeof(<a class="reference internal" href="api.html#zes-vf-util-engine-exp-t"><span class="std std-ref">zes_vf_util_engine_exp_t</span></a>));
-<a class="reference internal" href="api.html#zesvfmanagementgetvfengineutilizationexp"><span class="std std-ref">zesVFManagementGetVFEngineUtilizationExp</span></a>(activeVf, &amp;engineStatCount, engineStats0);
-sleep(1)
-<a class="reference internal" href="api.html#zes-vf-util-engine-exp-t"><span class="std std-ref">zes_vf_util_engine_exp_t</span></a>* engineStats1 = (<a class="reference internal" href="api.html#zes-vf-util-engine-exp-t"><span class="std std-ref">zes_vf_util_engine_exp_t</span></a>*) allocate(engineStatCount * sizeof(<a class="reference internal" href="api.html#zes-vf-util-engine-exp-t"><span class="std std-ref">zes_vf_util_engine_exp_t</span></a>));
-<a class="reference internal" href="api.html#zesvfmanagementgetvfengineutilizationexp"><span class="std std-ref">zesVFManagementGetVFEngineUtilizationExp</span></a>(activeVf, &amp;engineStatCount, &amp;engineStats1);</pre>
+<section id="concurrent-metric-groups">
+<h3>Concurrent Metric Groups<a class="headerlink" href="#concurrent-metric-groups" title="Link to this heading">#</a></h3>
+<p>Metric groups enumerated or created cannot be collected or activated concurrently if the metric groups use shared HW resources.
+Currently Metric “Domains” are used to determine if a metric group can be collected along with another metric group.
+Since Metric “Domains” are at a metric group level, it cannot represent metric level HW dependencies.
+This API replaces using “domain” property of metric group to determine independent HW usage and provides sets of metric groups which could be collected concurrently.
+<a class="reference internal" href="api.html#zetdevicegetconcurrentmetricgroupsexp"><span class="std std-ref">zetDeviceGetConcurrentMetricGroupsExp</span></a> allows an input list of metric groups to be re-arranged to sequential sets of metric groups which could be collected concurrently.
+This API also allows the application to calculate the number of replays or workload executions necessary to collect a set of overlapping metric groups.</p>
 </section>
+</section>
+<section id="sample-code">
+<h2>Sample Code<a class="headerlink" href="#sample-code" title="Link to this heading">#</a></h2>
+<p>The following pseudo-code shows how an application could query for sets of concurrent metric groups within a list of metric groups</p>
+<pre class="literal-block">// Input metric group count;
+uint32_t inputMetricGroupCount;
+
+// Input and output list of metric groups
+zet_metric_group_handle_t * phMetricGroups;
+
+// Output concurrent group information
+uint32_t concurrentGroupCount = 0;
+
+// Get number of concurrent groups / number of replays necessary
+<a class="reference internal" href="api.html#zetdevicegetconcurrentmetricgroupsexp"><span class="std std-ref">zetDeviceGetConcurrentMetricGroupsExp</span></a>(hDevice, inputMetricGroupCount, phMetricGroups, &amp;concurrentGroupCount, nullptr);
+
+// Allocate for count per concurrent group
+uint32_t * pCountPerConcurrentGroup = malloc(sizeof(uint32_t) * concurrentGroupCount);
+
+// Retrieve the rearranged metric groups along with the count per concurrent group
+<a class="reference internal" href="api.html#zetdevicegetconcurrentmetricgroupsexp"><span class="std std-ref">zetDeviceGetConcurrentMetricGroupsExp</span></a>(hDevice, inputMetricGroupCount, phMetricGroups, &amp;concurrentGroupCount, pCountPerConcurrentGroup);
+
+// Activate the concurrent groups and Replay the workload
+for(uint32_t concurrentGroupIndex = 0; concurrentGroupIndex &lt; concurrentGroupCount; concurrentGroupIndex ++){
+    <a class="reference internal" href="api.html#zetcontextactivatemetricgroups"><span class="std std-ref">zetContextActivateMetricGroups</span></a>(hContext, hDevice, pCountPerConcurrentGroup[concurrentGroupIndex], phMetricGroups);
+
+    // run workload
+
+    phMetricGroups += pCountPerConcurrentGroup[concurrentGroupIndex];
+}</pre>
 </section>
 </section>
 
@@ -422,9 +407,10 @@ sleep(1)
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-function-management">Virtual Function Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrent-metric-groups">Concurrent Metric Groups</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-code">Sample Code</a></li>
 </ul>
   </nav></div>
 

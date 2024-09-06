@@ -3,7 +3,7 @@
 ==============================
 Tools API
 ==============================
-oneAPI Level Zero Specification - Version 1.9.3
+oneAPI Level Zero Specification - Version 1.10
 
  
 
@@ -1018,6 +1018,206 @@ zet_tracer_exp_desc_t
 
  
 
+Concurrentmetricgroup
+============================================================
+* Functions
+
+
+    * :ref:`zetDeviceGetConcurrentMetricGroupsExp`
+
+ 
+* Enumerations
+
+
+    * :ref:`zet-concurrent-metric-groups-exp-version-t`
+
+ 
+
+
+Concurrentmetricgroup Functions
+------------------------------------------------------------------------------
+
+
+.. _zetDeviceGetConcurrentMetricGroupsExp:
+
+zetDeviceGetConcurrentMetricGroupsExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetDeviceGetConcurrentMetricGroupsExp
+    :project: LevelZero
+
+
+
+Concurrentmetricgroup Enums
+------------------------------------------------------------------------------
+
+
+.. _zet-concurrent-metric-groups-exp-version-t:
+
+zet_concurrent_metric_groups_exp_version_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenenum:: zet_concurrent_metric_groups_exp_version_t
+    :project: LevelZero
+
+ 
+
+ 
+
+Metrictracer
+============================================================
+* Functions
+
+
+    * :ref:`zetMetricTracerCreateExp`
+    * :ref:`zetMetricTracerDestroyExp`
+    * :ref:`zetMetricTracerEnableExp`
+    * :ref:`zetMetricTracerDisableExp`
+    * :ref:`zetMetricTracerReadDataExp`
+    * :ref:`zetMetricDecoderCreateExp`
+    * :ref:`zetMetricDecoderDestroyExp`
+    * :ref:`zetMetricDecoderGetDecodableMetricsExp`
+    * :ref:`zetMetricTracerDecodeExp`
+
+ 
+* Enumerations
+
+
+    * :ref:`zet-metric-tracer-exp-version-t`
+
+ 
+* Structures
+
+
+    * :ref:`zet-metric-tracer-exp-desc-t`
+    * :ref:`zet-metric-entry-exp-t`
+
+
+Metrictracer Functions
+------------------------------------------------------------------------------
+
+
+.. _zetMetricTracerCreateExp:
+
+zetMetricTracerCreateExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetMetricTracerCreateExp
+    :project: LevelZero
+
+
+.. _zetMetricTracerDestroyExp:
+
+zetMetricTracerDestroyExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetMetricTracerDestroyExp
+    :project: LevelZero
+
+
+.. _zetMetricTracerEnableExp:
+
+zetMetricTracerEnableExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetMetricTracerEnableExp
+    :project: LevelZero
+
+
+.. _zetMetricTracerDisableExp:
+
+zetMetricTracerDisableExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetMetricTracerDisableExp
+    :project: LevelZero
+
+
+.. _zetMetricTracerReadDataExp:
+
+zetMetricTracerReadDataExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetMetricTracerReadDataExp
+    :project: LevelZero
+
+
+.. _zetMetricDecoderCreateExp:
+
+zetMetricDecoderCreateExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetMetricDecoderCreateExp
+    :project: LevelZero
+
+
+.. _zetMetricDecoderDestroyExp:
+
+zetMetricDecoderDestroyExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetMetricDecoderDestroyExp
+    :project: LevelZero
+
+
+.. _zetMetricDecoderGetDecodableMetricsExp:
+
+zetMetricDecoderGetDecodableMetricsExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetMetricDecoderGetDecodableMetricsExp
+    :project: LevelZero
+
+
+.. _zetMetricTracerDecodeExp:
+
+zetMetricTracerDecodeExp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenfunction:: zetMetricTracerDecodeExp
+    :project: LevelZero
+
+
+
+Metrictracer Enums
+------------------------------------------------------------------------------
+
+
+.. _zet-metric-tracer-exp-version-t:
+
+zet_metric_tracer_exp_version_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenenum:: zet_metric_tracer_exp_version_t
+    :project: LevelZero
+
+ 
+Metrictracer Structures
+------------------------------------------------------------------------------
+
+.. _zet-metric-tracer-exp-desc-t:
+
+zet_metric_tracer_exp_desc_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: zet_metric_tracer_exp_desc_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _zet-metric-entry-exp-t:
+
+zet_metric_entry_exp_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: zet_metric_entry_exp_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+
+ 
+
 Multimetricvalues
 ============================================================
 * Functions
@@ -1210,7 +1410,7 @@ Metricprogrammable
     * :ref:`zetMetricProgrammableGetParamInfoExp`
     * :ref:`zetMetricProgrammableGetParamValueInfoExp`
     * :ref:`zetMetricCreateFromProgrammableExp`
-    * :ref:`zetMetricGroupCreateExp`
+    * :ref:`zetDeviceCreateMetricGroupsFromMetricsExp`
     * :ref:`zetMetricGroupAddMetricExp`
     * :ref:`zetMetricGroupRemoveMetricExp`
     * :ref:`zetMetricGroupCloseExp`
@@ -1231,6 +1431,7 @@ Metricprogrammable
 
     * :ref:`zet-metric-programmable-exp-properties-t`
     * :ref:`zet-value-uint64-range-exp-t`
+    * :ref:`zet-value-fp64-range-exp-t`
     * :ref:`zet-value-info-exp-t`
     * :ref:`zet-metric-programmable-param-info-exp-t`
     * :ref:`zet-metric-programmable-param-value-info-exp-t`
@@ -1286,12 +1487,12 @@ zetMetricCreateFromProgrammableExp
     :project: LevelZero
 
 
-.. _zetMetricGroupCreateExp:
+.. _zetDeviceCreateMetricGroupsFromMetricsExp:
 
-zetMetricGroupCreateExp
+zetDeviceCreateMetricGroupsFromMetricsExp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. doxygenfunction:: zetMetricGroupCreateExp
+.. doxygenfunction:: zetDeviceCreateMetricGroupsFromMetricsExp
     :project: LevelZero
 
 
@@ -1391,6 +1592,16 @@ zet_value_uint64_range_exp_t
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. doxygenstruct:: zet_value_uint64_range_exp_t
+    :project: LevelZero
+    :members:
+    :undoc-members:
+
+.. _zet-value-fp64-range-exp-t:
+
+zet_value_fp64_range_exp_t
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. doxygenstruct:: zet_value_fp64_range_exp_t
     :project: LevelZero
     :members:
     :undoc-members:
