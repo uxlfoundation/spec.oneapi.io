@@ -26,6 +26,9 @@ Level Zero
   * - Version
     - Date
     - View
+  * - `Level Zero v1.10`_
+    - 2024-09-06
+    - `HTML <https://spec.oneapi.io/level-zero/1.10/index.html>`__  	
   * - `Level Zero v1.9.3`_
     - 2024-05-03
     - `HTML <https://spec.oneapi.io/level-zero/1.9.3/index.html>`__  
@@ -95,6 +98,34 @@ Level Zero
 
 Release Notes
 -------------
+
+Level Zero v1.10
+~~~~~~~~~~~~~~~~~~
+
+* Updated Features
+
+	- Supports new single API for Level Zero Init and Driver Retrieval
+	- Support for concurrent Metric group query
+	- Supports experimental extension for metric tracer
+	- Support to specify fp64 range to metric_value_info
+	- Support zetCreateMetricGroupsFromMetricsExp programmable API
+	- Support for new temperature sensor types
+	- Support for ZE_API_VERSION_CURRENT_M macro for compile time version validation.
+	- Supports version 1.1 of mutable commands extension
+	- Support for NPU graph support for MCL extension
+	- Support for new ELF memory space for debugger
+	- Support for Metric Tracer Decode support for sub-devices
+	- Support for byte normalized programmable type
+	- Added updates to virtual management API
+
+* Patches to v1.9.3 release
+
+	- Added description to replace C string parameter type
+	- Fixed metricprogrammable spec issues
+	- Update documentation on zesInit Usage
+	- Remove VF experimental interfaces
+	- fix metrics names in tracer
+	
 
 Level Zero v1.9.3
 ~~~~~~~~~~~~~~~~~~
